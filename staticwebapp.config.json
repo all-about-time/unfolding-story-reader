@@ -1,0 +1,2 @@
+{"navigationFallback":{"rewrite":"/index.html","exclude":["/data/*","/*.{css,js,json,png,svg,ico,webmanifest}"]},"globalHeaders":{"X-Content-Type-Options":"nosniff","Referrer-Policy":"strict-origin-when-cross-origin","Permissions-Policy":"camera=(), microphone=(), geolocation=()"},"mimeTypes":{".json":"application/json; charset=utf-8"}}
+

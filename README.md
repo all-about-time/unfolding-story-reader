@@ -1,13 +1,13 @@
-# The Unfolding Story — Scripture Reader
+# The Unfolding Story
 
-Minimal static reader to embed in Notion. Session 001 is implemented using exact verse text extracted from the user's official Berean Standard Bible USJ archive.
+A standalone progressive Bible reader built from The Unfolding Story v0.7 plan and the public-domain Berean Standard Bible.
 
-Files: `index.html` user interface, `sessions.json` session metadata, `bible.json` selected verse text.
+Version 0.8 publishes all 266 sessions and lazy-loads Bible text by book. There is no account or calendar schedule.
 
-Deploy all three files to the root of `all-about-time/unfolding-story-reader` on branch `main`. Azure Static Web Apps workflow currently uses `app_location: /` and `output_location: ""`.
+## Data build
 
-Launch at `https://YOUR-AZURE-URL/?session=001` and embed this URL in the Session 001 Notion page using `/embed`.
+`node scripts/build-data.mjs` reads the v0.7 plan and BSB USJ source paths from `UNFOLDING_PLAN` and `BSB_USJ_DIR`, or from the adjacent Codex workspace defaults used for this release.
 
-For new sessions, extend `sessions.json` with structured reference ranges and generate relevant USJ verses into `bible.json`. Do not merely add references without the matching Bible text. Note that this prototype holds only the Session 001 verses.
+`node scripts/validate-data.mjs` confirms all 266 sessions, 66 book files, sequence identity, and every referenced verse.
 
 Text attribution: Berean Standard Bible (BSB), public domain. https://berean.bible/

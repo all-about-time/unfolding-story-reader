@@ -1,30 +1,25 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>The Unfolding Story — Scripture Reader</title>
-<style>
-:root{color-scheme:light;--paper:#fcfbf8;--ink:#292d32;--muted:#68717a;--line:#deded7;--accent:#526b65;--fsize:19px}
-*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.6 system-ui,-apple-system,"Segoe UI",sans-serif}main{max-width:820px;margin:auto;padding:clamp(18px,4vw,45px)}header{border-bottom:1px solid var(--line);padding-bottom:19px;margin-bottom:27px}.brand{font-size:12px;font-weight:750;letter-spacing:.15em;text-transform:uppercase;color:var(--accent)}h1{font-size:clamp(25px,5vw,36px);line-height:1.2;margin:10px 0 8px}.meta,.subtitle{color:var(--muted);font-size:14px;margin:4px 0}.controls{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;margin:18px 0 8px;align-items:center}.controls button{border:1px solid #bbbdb9;border-radius:9px;background:#fff;padding:6px 13px;color:var(--ink);cursor:pointer;font-size:17px}.controls button:focus-visible,summary:focus-visible{outline:3px solid #8dad9f}.reader{font-family:Georgia,"Times New Roman",serif;font-size:var(--fsize);line-height:1.85}.passage{margin:0 0 34px}.passage h2{font:700 16px/1.5 system-ui,-apple-system,sans-serif;color:var(--accent);margin:28px 0 10px;padding-top:18px;border-top:1px solid var(--line)}.verses{margin:0}.verse{display:inline}.vn{font-family:system-ui,sans-serif;font-size:.65em;font-weight:700;vertical-align:super;color:var(--accent);margin-right:.23em}.verse:not(:last-child){margin-right:.22em}details{border:1px solid var(--line);border-radius:12px;padding:16px 20px;margin:22px 0}summary{cursor:pointer;font-weight:700;color:var(--accent)}.supp{padding-top:10px}.supp h2{border:0;margin-top:8px;padding:0}footer{border-top:1px solid var(--line);margin-top:36px;padding-top:20px;font-size:12px;color:var(--muted)}.error{padding:20px;background:#fff2ef;color:#713c30;border-radius:8px}@media(max-width:500px){main{padding:16px}.reader{line-height:1.75}.passage{margin-bottom:22px}}@media print{.controls{display:none}main{max-width:none}.passage{break-inside:avoid}details{border:none;padding:0}}
-</style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="The Unfolding Story: a progressive Bible reading journey through 266 sessions.">
+  <title>The Unfolding Story</title>
+  <link rel="stylesheet" href="./styles.css">
 </head>
-<body><main>
-<header><div class="brand">The Unfolding Story</div><h1 id="title">Scripture Reader</h1><p class="meta" id="meta">Loading…</p><p class="subtitle">Journey through Scripture. Discover God's heart. Grow in His presence.</p></header>
-<div class="controls"><span class="meta">Berean Standard Bible (BSB)</span><div><button id="smaller" aria-label="Decrease text size">A−</button> <button id="larger" aria-label="Increase text size">A+</button></div></div>
-<div id="readings" class="reader" aria-live="polite"></div>
-<details id="supplement"><summary>Supplementary reading (optional)</summary><div id="extra" class="reader supp"></div></details>
-<footer>Scripture quotations from the Berean Standard Bible (BSB), public domain. Source: <a href="https://berean.bible/" target="_blank" rel="noopener noreferrer">berean.bible</a>. The Unfolding Story is an independently curated reading sequence.</footer>
-</main>
-<script>
-'use strict';
-const search = new URLSearchParams(location.search);
-const sessionId = (search.get('session')||'001').padStart(3,'0');
-let fontSize = Number(sessionStorage.getItem('readerFontSize'))||19;
-function applySize(){document.documentElement.style.setProperty('--fsize',fontSize+'px')}
-applySize();
-document.getElementById('smaller').onclick=()=>{fontSize=Math.max(15,fontSize-2);sessionStorage.setItem('readerFontSize',fontSize);applySize()};
-document.getElementById('larger').onclick=()=>{fontSize=Math.min(32,fontSize+2);sessionStorage.setItem('readerFontSize',fontSize);applySize()};
-function makePassage(ref,bible){const section=document.createElement('section');section.className='passage';const title=document.createElement('h2');title.textContent=ref.label;section.append(title);const p=document.createElement('p');p.className='verses';for(let n=ref.start;n<=ref.end;n++){const value=bible.books?.[ref.book]?.[String(ref.chapter)]?.[String(n)];if(!value)throw Error('Missing '+ref.label+' verse '+n);const span=document.createElement('span');span.className='verse';const num=document.createElement('sup');num.className='vn';num.textContent=n;span.append(num,document.createTextNode(value));p.append(span,document.createTextNode(' '))}section.append(p);return section}
-(async()=>{try{const [sr,br]=await Promise.all([fetch('./sessions.json'),fetch('./bible.json')]);if(!sr.ok||!br.ok)throw Error('Could not load Scripture data');const sessions=await sr.json(), bible=await br.json();const s=sessions[sessionId];if(!s)throw Error('Session '+sessionId+' has not been published yet');document.title='S'+sessionId+' — '+s.title+' | The Unfolding Story';document.getElementById('title').textContent='S'+sessionId+' — '+s.title;document.getElementById('meta').textContent=s.part+' · '+s.primary.length+' primary passages';const required=document.getElementById('readings');for(const r of s.primary)required.append(makePassage(r,bible));const optional=document.getElementById('extra');for(const r of s.supplementary||[])optional.append(makePassage(r,bible));if(!s.supplementary?.length)document.getElementById('supplement').hidden=true}catch(e){document.getElementById('readings').innerHTML='';const error=document.createElement('div');error.className='error';error.textContent=e.message;document.getElementById('readings').append(error)}})();
-</script></body></html>
+<body>
+  <header class="site-header"><a class="brand" href="./">The Unfolding Story</a><span class="translation">Berean Standard Bible</span></header>
+  <main class="shell">
+    <section class="reader-header">
+      <p class="eyebrow" id="part">Loading reading plan…</p><h1 id="title">Scripture Reader</h1><p class="session-meta" id="session-meta"></p>
+      <nav class="session-nav" aria-label="Session navigation"><a id="previous" class="nav-button" href="#">Previous</a><label>Session <select id="session-select" aria-label="Choose a reading session"></select></label><a id="next" class="nav-button" href="#">Next</a></nav>
+    </section>
+    <div class="reading-controls"><span>Progressive reading · no daily schedule</span><div><button id="smaller" type="button" aria-label="Decrease text size">A−</button><button id="larger" type="button" aria-label="Increase text size">A+</button></div></div>
+    <article id="readings" class="reader" aria-live="polite"></article>
+    <details id="supplementary" class="supplementary"><summary>Supplementary reading <span>optional</span></summary><div id="extra" class="reader"></div></details>
+    <p id="error" class="error" role="alert" hidden></p>
+  </main>
+  <footer>Scripture quotations are from the Berean Standard Bible (BSB), public domain. The reading sequence is independently curated.</footer>
+  <script type="module" src="./app.js"></script>
+</body>
+</html>
