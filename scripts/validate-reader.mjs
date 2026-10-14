@@ -1,0 +1,42 @@
+import fs from 'node:fs';
+import vm from 'node:vm';
+import assert from 'node:assert/strict';
+const sessions = JSON.parse(fs.readFileSync('data/sessions.json', 'utf8'));
+const source = fs.readFileSync('app.js', 'utf8').replace(/init\(\);\s*$/, '');
+function setup(saved = {}, blocked = false) {
+  const values = new Map(Object.entries(saved));
+  const elements = new Map();
+  const element = id => {
+    if (!elements.has(id)) elements.set(id, { hidden: true, dataset: {}, classList: { toggle() {} }, setAttribute(name, value) { this[name] = value; }, focus() {} });
+    return elements.get(id);
+  };
+  const context = vm.createContext({ console, URLSearchParams, location: { search: '' }, localStorage: { getItem(key) { if (blocked) throw Error('blocked'); return values.get(key) ?? null; }, setItem(key, value) { if (blocked) throw Error('blocked'); values.set(key, String(value)); } }, document: { getElementById: element, documentElement: { dataset: {}, style: { setProperty() {} } }, querySelectorAll() { return []; }, body: { classList: { toggle() {} } } } });
+  vm.runInContext(source, context);
+  context.sessions = sessions;
+  vm.runInContext('state.sessions = sessions;', context);
+  return { context, values, element, run: code => vm.runInContext(code, context) };
+}
+const first = setup();
+assert.equal(first.run('sessionFromUrl().id'), 'S001');
+first.run('state.current = state.sessions[0]; toggleComplete();');
+assert.equal(first.element('reader-progress-bar').value, 1);
+assert.equal(first.element('complete-bottom').textContent, 'Session completed ✓');
+assert.equal(first.element('resume-link').href, '?session=S002');
+const reopened = setup(Object.fromEntries(first.values));
+assert.equal(reopened.run('sessionFromUrl().id'), 'S002');
+reopened.run("location.search = '?session=S197';");
+assert.equal(reopened.run('sessionFromUrl().id'), 'S197');
+reopened.run("setTheme('dark');");
+assert.equal(setup(Object.fromEntries(reopened.values)).run('state.theme'), 'dark');
+first.run('toggleComplete();');
+assert.equal(first.element('reader-progress-bar').value, 0);
+assert.equal(first.run('sessionFromUrl().id'), 'S001');
+const end = setup({ 'unfolding-story-completed': JSON.stringify(sessions.map(session => session.id)) });
+assert.equal(end.run('sessionFromUrl().id'), 'S266');
+end.run('state.current = state.sessions[265]; updateProgress();');
+assert.equal(end.element('reader-progress-percent').textContent, '100%');
+assert.equal(setup({ 'unfolding-story-completed': 'broken json' }).run('sessionFromUrl().id'), 'S001');
+const unavailable = setup({}, true);
+unavailable.run('state.current = state.sessions[0]; toggleComplete();');
+assert.equal(unavailable.element('storage-note').hidden, false);
+console.log('Reader checks passed: completion, undo, persistence, automatic resume, explicit links, final session, theme persistence, and unavailable/corrupt storage.');
