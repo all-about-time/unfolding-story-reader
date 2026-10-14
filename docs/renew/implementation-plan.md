@@ -32,3 +32,7 @@ The original methodology sources are now held outside the repository: Let the Wo
 ## Deliberate boundary
 
 All RENEW data remains local in Version 1.0. The data layer uses namespaced keys and portable JSON so a later OneDrive sync implementation can map saved reflections without changing the meditation flow. OneDrive sync is not part of this implementation.
+
+## Version 1.0 release checkpoint
+
+The published reader was validated with the temporary experience-test library. The test covered theme selection, Read, Emphasise, Notice, Explore, Walk, fixed Scripture placement, direct progress navigation, local reflection save, My Reflections visibility, and a Reading-tab regression check. No browser console errors were recorded. The temporary library remains explicitly marked for replacement before a content release.
