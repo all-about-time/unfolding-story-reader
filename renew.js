@@ -77,19 +77,29 @@ function renderWords(container, text) {
 function renderJourney() {
   const root = byId('renew-journey'); root.replaceChildren();
   const { scripture, verses, step } = renew.journey;
-  const label = document.createElement('p'); label.className = 'eyebrow'; label.textContent = step === 'read' ? 'Step 1 of 5 · Read' : 'Step 2 of 5 · Emphasise';
+  const stepLabels = { read: 'Step 1 of 5 · Read', emphasise: 'Step 2 of 5 · Emphasise', notice: 'Step 3 of 5 · Notice' };
+  const label = document.createElement('p'); label.className = 'eyebrow'; label.textContent = stepLabels[step];
   const heading = document.createElement('h2'); heading.textContent = scripture.reference.label;
-  const guidance = document.createElement('p'); guidance.className = 'renew-guidance'; guidance.textContent = step === 'read' ? 'Read this Scripture slowly three times. Let the words settle before moving on.' : 'Move the emphasis through one word at a time. Notice which word begins to stand out.';
+  const guidance = document.createElement('p'); guidance.className = 'renew-guidance'; guidance.textContent = step === 'read' ? 'Read this Scripture slowly three times. Let the words settle before moving on.' : step === 'emphasise' ? 'Move the emphasis through one word at a time. Notice which word begins to stand out.' : 'Which word catches your attention? What comes to mind as you sit with it?';
   root.append(label, heading, guidance);
   if (step === 'read') {
     const passage = document.createElement('p'); passage.className = 'renew-passage';
     verses.forEach(({ verse, text }) => { const number = document.createElement('sup'); number.textContent = verse; passage.append(number, document.createTextNode(` ${text} `)); });
     const next = document.createElement('button'); next.type = 'button'; next.className = 'renew-begin'; next.textContent = 'Continue to Emphasise'; next.onclick = () => { renew.journey.step = 'emphasise'; renderJourney(); };
     root.append(passage, next);
-  } else {
+  } else if (step === 'emphasise') {
     renderWords(root, verses.map(item => item.text).join(' '));
     const back = document.createElement('button'); back.type = 'button'; back.textContent = 'Read again'; back.onclick = () => { renew.journey.step = 'read'; renderJourney(); };
-    root.append(back);
+    const notice = document.createElement('button'); notice.type = 'button'; notice.className = 'renew-begin'; notice.textContent = 'Continue to Notice'; notice.onclick = () => { renew.journey.step = 'notice'; renderJourney(); };
+    root.append(back, notice);
+  } else {
+    const wordLabel = document.createElement('label'); wordLabel.htmlFor = 'renew-notice-word'; wordLabel.textContent = 'My word';
+    const word = document.createElement('input'); word.id = 'renew-notice-word'; word.type = 'text'; word.maxLength = 80; word.value = renew.journey.noticeWord || ''; word.autocomplete = 'off';
+    const reflectionLabel = document.createElement('label'); reflectionLabel.htmlFor = 'renew-notice-reflection'; reflectionLabel.textContent = 'What does it bring to mind, and why might it resonate?';
+    const reflection = document.createElement('textarea'); reflection.id = 'renew-notice-reflection'; reflection.rows = 5; reflection.maxLength = 1200; reflection.value = renew.journey.noticeReflection || '';
+    const status = document.createElement('p'); status.className = 'session-meta'; status.textContent = 'This draft stays on this device and is not yet saved as a reflection.';
+    const back = document.createElement('button'); back.type = 'button'; back.textContent = 'Back to Emphasise'; back.onclick = () => { renew.journey.noticeWord = word.value; renew.journey.noticeReflection = reflection.value; renew.journey.step = 'emphasise'; renderJourney(); };
+    root.append(wordLabel, word, reflectionLabel, reflection, status, back);
   }
 }
 

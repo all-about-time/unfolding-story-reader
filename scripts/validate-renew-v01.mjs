@@ -17,5 +17,5 @@ for (const library of registry.libraries) {
 const html = fs.readFileSync('index.html', 'utf8');
 const module = fs.readFileSync('renew.js', 'utf8');
 for (const marker of ['panel-meditation', 'renew-theme-grid', 'renew-library-status', 'renew-journey']) assert.ok(html.includes(marker));
-for (const marker of ['libraries.json', 'initRenew', 'renderThemes', 'loadActiveLibrary', 'resolvePassage', 'renderWords', "data.schemaVersion !== '1.0'"]) assert.ok(module.includes(marker));
-console.log('RENEW v0.3 checks passed: registry structure, active-library adapter, and Read/Emphasise markers.');
+for (const marker of ['libraries.json', 'initRenew', 'renderThemes', 'loadActiveLibrary', 'resolvePassage', 'renderWords', 'renew-notice-reflection', "data.schemaVersion !== '1.0'"]) assert.ok(module.includes(marker));
+console.log('RENEW v0.4 checks passed: registry structure, Read/Emphasise, and local Notice draft markers.');
