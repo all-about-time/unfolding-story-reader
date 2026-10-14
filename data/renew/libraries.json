@@ -1,0 +1,18 @@
+{
+  "schemaVersion": "1.0",
+  "moduleVersion": "0.1",
+  "updated": "2026-10-14",
+  "libraries": [
+    {
+      "id": "starter-placeholders",
+      "name": "Starter themes",
+      "status": "placeholder",
+      "themes": [
+        { "id": "rest", "name": "Rest", "description": "A placeholder for Scripture on rest and renewal." },
+        { "id": "courage", "name": "Courage", "description": "A placeholder for Scripture on courage and trust." },
+        { "id": "belonging", "name": "Belonging", "description": "A placeholder for Scripture on love and connection." },
+        { "id": "purpose", "name": "Purpose", "description": "A placeholder for Scripture on growth and contribution." }
+      ]
+    }
+  ]
+}

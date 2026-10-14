@@ -8,6 +8,10 @@ Opening the reader's home URL resumes at the session after the highest completed
 
 Public reader: https://red-glacier-017a86210.1.azurestaticapps.net/
 
+## RENEW meditation
+
+RENEW Version 0.1 provides a data-driven theme-selection foundation in the Meditation tab. Its placeholder themes load from `data/renew/libraries.json`; see [data/renew/README.md](data/renew/README.md) and [the implementation plan](docs/renew/implementation-plan.md) for the library contract and staged acceptance criteria.
+
 ## Data build
 
 `node scripts/build-data.mjs` reads the v0.7 plan and BSB USJ source paths from `UNFOLDING_PLAN` and `BSB_USJ_DIR`, or from the adjacent Codex workspace defaults used for this release.
