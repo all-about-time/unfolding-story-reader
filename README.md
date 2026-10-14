@@ -2,7 +2,7 @@
 
 A standalone progressive Bible reader built from The Unfolding Story v0.7 plan and the public-domain Berean Standard Bible.
 
-Version 0.9 includes all 266 sessions, an expandable searchable overview, light/dark themes, text-size preferences, and completion controls at the top and bottom of each session. Progress is saved in this browser with no account or calendar schedule.
+Version 0.9.1 uses Flourish's card layout, pill tabs, neutral grey dark theme, and green/sky/pink/gold accent palette. Settings contains saved theme, accent, reading text size, and font preferences. All 266 sessions, the searchable overview, and completion/progress controls are in Reading; Meditation and Prayer are placeholders. Progress is saved in this browser with no account or calendar schedule.
 
 Opening the reader's home URL resumes at the session after the highest completed session. Explicit session links still open the selected reading. After Session 266 is complete, the reader stays on Session 266. Completion can be toggled off to correct a mistake. Clearing browser data clears progress; it does not sync between devices.
 

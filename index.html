@@ -6,17 +6,21 @@
   <meta name="description" content="The Unfolding Story: a progressive Bible reading journey through 266 sessions.">
   <title>The Unfolding Story</title>
   <link rel="stylesheet" href="./styles.css">
-  <link rel="stylesheet" href="./features.css">
+  <link rel="stylesheet" href="./layout.css">
 </head>
 <body>
-  <header class="site-header"><a class="brand" href="./">The Unfolding Story</a><div class="header-actions"><button id="theme-toggle" class="header-button" type="button" aria-pressed="false">Dark theme</button><button id="overview-toggle" class="header-button" type="button" aria-expanded="false" aria-controls="overview">Explore all sessions</button></div><span class="translation">Berean Standard Bible</span></header>
+  <div class="app-shell">
+  <div class="app-toolbar"><a class="app-icon" href="./" aria-label="The Unfolding Story home" title="App icon placeholder"><svg viewBox="0 0 32 32" aria-hidden="true"><rect x="4" y="4" width="24" height="24" rx="7" fill="none" stroke="currentColor" stroke-width="1.5" stroke-dasharray="3 3"/><path d="M10 12h12M10 16h12M10 20h8" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></a><button id="settings-open" type="button" aria-haspopup="dialog">⚙ Settings</button></div>
+  <nav class="tabs" role="tablist" aria-label="Journey views"><button id="tab-reading" role="tab" aria-selected="true" aria-controls="panel-reading" data-tab="reading">Reading</button><button id="tab-meditation" role="tab" aria-selected="false" aria-controls="panel-meditation" tabindex="-1" data-tab="meditation">Meditation</button><button id="tab-prayer" role="tab" aria-selected="false" aria-controls="panel-prayer" tabindex="-1" data-tab="prayer">Prayer</button></nav>
+  <div id="panel-reading" role="tabpanel" aria-labelledby="tab-reading">
+  <div class="reading-toolbar"><button id="overview-toggle" type="button" aria-expanded="false" aria-controls="overview">Explore all sessions</button></div>
   <aside id="overview" class="overview" hidden aria-label="Reading plan overview"><div class="overview-head"><div><p class="eyebrow">Your journey</p><h2>All 266 sessions</h2></div><button id="overview-close" type="button" aria-label="Close session overview">Close</button></div><label class="overview-search">Find a session <input id="session-search" type="search" placeholder="Title, part or session number"></label><div class="progress-card"><div><strong id="progress-count">0 of 266 complete</strong><span id="progress-percent">0%</span></div><progress id="progress-bar" max="266" value="0"></progress><a id="resume-link" href="?session=S001">Resume reading</a></div><nav id="overview-list" aria-label="All reading sessions"></nav></aside>
   <main class="shell">
     <section class="reader-header">
       <p class="eyebrow" id="part">Loading reading plan…</p><h1 id="title">Scripture Reader</h1><p class="session-meta" id="session-meta"></p>
       <nav class="session-nav" aria-label="Session navigation"><a id="previous" class="nav-button" href="#">Previous</a><label>Session <select id="session-select" aria-label="Choose a reading session"></select></label><a id="next" class="nav-button" href="#">Next</a></nav>
     </section>
-    <div class="reading-controls"><span>Progressive reading · no account · no daily schedule</span><div><button id="complete" class="complete-button" type="button">Mark complete</button><button id="smaller" type="button" aria-label="Decrease text size">A−</button><button id="larger" type="button" aria-label="Increase text size">A+</button></div></div>
+    <div class="reading-controls"><span>Progressive reading · no account · no daily schedule</span><button id="complete" class="complete-button" type="button">Mark complete</button></div>
     <section class="journey-progress" aria-label="Reading progress"><div><strong id="reader-progress-count">0 of 266 complete</strong><span id="reader-progress-percent">0%</span></div><progress id="reader-progress-bar" max="266" value="0"></progress></section>
     <p id="storage-note" class="session-meta" hidden>Your browser has blocked saved progress. You can keep reading, but progress and preferences will not survive reopening.</p>
     <article id="readings" class="reader" aria-live="polite"></article>
@@ -25,6 +29,11 @@
     <p id="error" class="error" role="alert" hidden></p>
   </main>
   <footer>Scripture quotations are from the Berean Standard Bible (BSB), public domain. The reading sequence is independently curated.</footer>
+  </div>
+  <section id="panel-meditation" class="placeholder-card" role="tabpanel" aria-labelledby="tab-meditation" hidden><p class="eyebrow">Pause and reflect</p><h1>Meditation</h1><p>A space for reflection. More functionality will be added here later.</p></section>
+  <section id="panel-prayer" class="placeholder-card" role="tabpanel" aria-labelledby="tab-prayer" hidden><p class="eyebrow">Respond in prayer</p><h1>Prayer</h1><p>A space for prayer. More functionality will be added here later.</p></section>
+  </div>
+  <dialog id="settings-dialog" aria-labelledby="settings-title"><div class="dialog-head"><h2 id="settings-title">Settings</h2><button id="settings-close" type="button" aria-label="Close settings">✕</button></div><div class="dialog-body"><fieldset><legend>Appearance</legend><button id="theme-toggle" type="button" aria-pressed="false">Dark theme</button></fieldset><fieldset><legend>Accent color</legend><div class="accent-options"><button data-accent-choice="green" aria-pressed="true" type="button"><span style="background:#4c806a"></span>Green</button><button data-accent-choice="sky" aria-pressed="false" type="button"><span style="background:#4089ad"></span>Sky</button><button data-accent-choice="pink" aria-pressed="false" type="button"><span style="background:#9c5b92"></span>Pink</button><button data-accent-choice="gold" aria-pressed="false" type="button"><span style="background:#b09124"></span>Gold</button></div></fieldset><fieldset><legend>Reading text</legend><label for="text-size">Text size <output id="text-size-value">19 px</output></label><input id="text-size" type="range" min="15" max="32" step="1" value="19"><div class="size-buttons"><button id="smaller" type="button" aria-label="Decrease text size">A−</button><button id="larger" type="button" aria-label="Increase text size">A+</button></div><label for="font-style">Font style</label><select id="font-style"><option value="serif">Classic serif</option><option value="sans">Clean sans serif</option><option value="book">Book serif</option></select><p class="font-preview">In the beginning God created the heavens and the earth.</p></fieldset><p class="settings-note">Preferences and reading progress are saved in this browser.</p></div></dialog>
   <script type="module" src="./app.js"></script>
 </body>
 </html>

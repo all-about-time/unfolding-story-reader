@@ -1,4 +1,4 @@
-const STORAGE = { completed: 'unfolding-story-completed', font: 'unfolding-story-font', theme: 'unfolding-story-theme' };
+const STORAGE = { completed: 'unfolding-story-completed', font: 'unfolding-story-font', theme: 'unfolding-story-theme', accent: 'unfolding-story-accent', fontStyle: 'unfolding-story-font-style' };
 const storage = {
   get(key, fallback = null) { try { return localStorage.getItem(key) ?? fallback; } catch { return fallback; } },
   set(key, value) { try { localStorage.setItem(key, value); } catch { $('storage-note').hidden = false; } }
@@ -10,6 +10,28 @@ const state = { sessions: [], books: new Map(), current: null, completed: new Se
 const $ = id => document.getElementById(id);
 document.documentElement.style.setProperty('--reader-size', `${state.font}px`);
 document.documentElement.dataset.theme = state.theme;
+const fontStyles = { serif: "Georgia, 'Times New Roman', serif", sans: "Aptos, 'Segoe UI', system-ui, sans-serif", book: "Palatino, 'Palatino Linotype', 'Book Antiqua', serif" };
+function setAccent(accent) {
+  accent = ['green', 'sky', 'pink', 'gold'].includes(accent) ? accent : 'green';
+  document.documentElement.dataset.accent = accent;
+  storage.set(STORAGE.accent, accent);
+  document.querySelectorAll('[data-accent-choice]').forEach(button => button.setAttribute('aria-pressed', String(button.dataset.accentChoice === accent)));
+}
+function setFontStyle(style) {
+  style = Object.hasOwn(fontStyles, style) ? style : 'serif';
+  document.documentElement.style.setProperty('--reader-font', fontStyles[style]);
+  $('font-style').value = style;
+  storage.set(STORAGE.fontStyle, style);
+}
+function selectTab(name) {
+  document.querySelectorAll('[data-tab]').forEach(button => {
+    const active = button.dataset.tab === name;
+    button.setAttribute('aria-selected', String(active));
+    button.tabIndex = active ? 0 : -1;
+    $(`panel-${button.dataset.tab}`).hidden = !active;
+  });
+  if (name !== 'reading' && !$('overview').hidden) toggleOverview(false);
+}
 
 function sessionFromUrl() {
   const requested = new URLSearchParams(location.search).get('session');
@@ -143,6 +165,8 @@ function changeSize(delta) {
   state.font = Math.max(15, Math.min(32, state.font + delta));
   storage.set(STORAGE.font, state.font);
   document.documentElement.style.setProperty('--reader-size', `${state.font}px`);
+  $('text-size').value = state.font;
+  $('text-size-value').textContent = `${state.font} px`;
 }
 
 function toggleComplete() {
@@ -180,6 +204,25 @@ async function init() {
     $('complete-bottom').onclick = toggleComplete;
     $('theme-toggle').onclick = () => setTheme(state.theme === 'dark' ? 'light' : 'dark');
     setTheme(state.theme);
+    setAccent(storage.get(STORAGE.accent, 'green'));
+    setFontStyle(storage.get(STORAGE.fontStyle, 'serif'));
+    changeSize(0);
+    $('settings-open').onclick = () => $('settings-dialog').showModal();
+    $('settings-close').onclick = () => $('settings-dialog').close();
+    $('text-size').oninput = event => changeSize(Number(event.target.value) - state.font);
+    $('font-style').onchange = event => setFontStyle(event.target.value);
+    document.querySelectorAll('[data-accent-choice]').forEach(button => button.onclick = () => setAccent(button.dataset.accentChoice));
+    const tabs = [...document.querySelectorAll('[data-tab]')];
+    tabs.forEach((button, index) => {
+      button.onclick = () => selectTab(button.dataset.tab);
+      button.onkeydown = event => {
+        if (!['ArrowLeft', 'ArrowRight', 'Home', 'End'].includes(event.key)) return;
+        event.preventDefault();
+        const target = event.key === 'Home' ? 0 : event.key === 'End' ? tabs.length - 1 : (index + (event.key === 'ArrowRight' ? 1 : -1) + tabs.length) % tabs.length;
+        selectTab(tabs[target].dataset.tab);
+        tabs[target].focus();
+      };
+    });
     $('overview-toggle').onclick = () => toggleOverview($('overview').hidden);
     $('overview-close').onclick = () => toggleOverview(false);
     $('session-search').oninput = event => {
@@ -188,7 +231,7 @@ async function init() {
       document.querySelectorAll('#overview-list details').forEach(group => group.open = Boolean(query));
       document.querySelectorAll('#overview-list details').forEach(group => group.hidden = ![...group.querySelectorAll('[data-session]')].some(link => !link.hidden));
     };
-    document.addEventListener('keydown', event => { if (event.key === 'Escape') toggleOverview(false); });
+    document.addEventListener('keydown', event => { if (event.key === 'Escape' && !$('overview').hidden) toggleOverview(false); });
     await renderSession(sessionFromUrl());
   } catch (error) {
     $('error').hidden = false;
