@@ -1,0 +1,11 @@
+{
+  "schemaVersion": "1.0",
+  "libraryVersion": "0.1-test",
+  "purpose": "Temporary experience-test references. Replace with curated libraries before a content release.",
+  "themes": [
+    {"id":"rest","name":"Rest","description":"A test Scripture selection for rest and renewal.","scriptures":[{"id":"psalm-23-1","reference":{"book":"PSA","label":"Psalm 23:1","startChapter":23,"startVerse":1,"endChapter":23,"endVerse":1}}]},
+    {"id":"courage","name":"Courage","description":"A test Scripture selection for courage and trust.","scriptures":[{"id":"isaiah-40-31","reference":{"book":"ISA","label":"Isaiah 40:31","startChapter":40,"startVerse":31,"endChapter":40,"endVerse":31}}]},
+    {"id":"belonging","name":"Belonging","description":"A test Scripture selection for love and connection.","scriptures":[{"id":"romans-8-38-39","reference":{"book":"ROM","label":"Romans 8:38–39","startChapter":8,"startVerse":38,"endChapter":8,"endVerse":39}}]},
+    {"id":"purpose","name":"Purpose","description":"A test Scripture selection for growth and contribution.","scriptures":[{"id":"EPH-2-10","reference":{"book":"EPH","label":"Ephesians 2:10","startChapter":2,"startVerse":10,"endChapter":2,"endVerse":10}}]}
+  ]
+}

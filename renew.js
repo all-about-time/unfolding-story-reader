@@ -1,148 +1,25 @@
-const RENEW_REGISTRY = './data/renew/libraries.json';
-const renew = { themes: [], selected: null, journey: null };
-const byId = id => document.getElementById(id);
-const validText = value => typeof value === 'string' && value.trim().length > 0;
-const message = text => { byId('renew-library-status').textContent = text; };
-
-function validReference(reference) {
-  return reference && validText(reference.book) && validText(reference.label)
-    && ['startChapter', 'startVerse', 'endChapter', 'endVerse'].every(key => Number.isInteger(reference[key]));
-}
-
-function normalizeThemes(library, themes) {
-  if (!Array.isArray(themes)) throw new Error(`${library.name} does not contain themes.`);
-  return themes.map(theme => {
-    if (!validText(theme.id) || !validText(theme.name) || !validText(theme.description)) throw new Error(`${library.name} contains an incomplete theme.`);
-    const scriptures = theme.scriptures || [];
-    if (!Array.isArray(scriptures) || scriptures.some(item => !validText(item.id) || !validReference(item.reference))) throw new Error(`${library.name} contains an invalid Scripture reference.`);
-    return { ...theme, scriptures, libraryId: library.id, libraryName: library.name, libraryStatus: library.status };
-  });
-}
-
-async function loadActiveLibrary(library) {
-  if (!validText(library.file)) throw new Error(`${library.name} needs a library file.`);
-  const response = await fetch(library.file);
-  if (!response.ok) throw new Error(`${library.name} could not be loaded.`);
-  const data = await response.json();
-  if (data.schemaVersion !== '1.0') throw new Error(`${library.name} has an unsupported library format.`);
-  return normalizeThemes(library, data.themes);
-}
-
-async function resolvePassage(reference) {
-  const response = await fetch(`./data/books/${reference.book}.json`);
-  if (!response.ok) throw new Error(`Could not load ${reference.label}.`);
-  const book = await response.json();
-  const verses = [];
-  for (let chapter = reference.startChapter; chapter <= reference.endChapter; chapter++) {
-    const start = chapter === reference.startChapter ? reference.startVerse : 1;
-    const chapterVerses = book.chapters[String(chapter)] || {};
-    const end = chapter === reference.endChapter ? reference.endVerse : Math.max(...Object.keys(chapterVerses).map(Number));
-    for (let verse = start; verse <= end; verse++) {
-      const text = chapterVerses[String(verse)];
-      if (!text) throw new Error(`${reference.label} does not match the available BSB text.`);
-      verses.push({ verse, text });
-    }
-  }
-  return verses;
-}
-
-function renderWords(container, text) {
-  const words = text.match(/\S+/g) || [];
-  const controls = document.createElement('div'); controls.className = 'renew-emphasis-controls';
-  const previous = document.createElement('button'); previous.type = 'button'; previous.textContent = 'Previous word';
-  const next = document.createElement('button'); next.type = 'button'; next.textContent = 'Next word';
-  const wordsLine = document.createElement('div'); wordsLine.className = 'renew-words'; wordsLine.setAttribute('aria-label', 'Words in the Scripture passage');
-  let selected = 0;
-  const buttons = words.map((word, index) => {
-    const button = document.createElement('button');
-    button.type = 'button'; button.className = 'renew-word'; button.textContent = word; button.setAttribute('aria-pressed', 'false');
-    button.onclick = () => selectWord(index);
-    wordsLine.append(button, document.createTextNode(' '));
-    return button;
-  });
-  function selectWord(index) {
-    selected = (index + buttons.length) % buttons.length;
-    buttons.forEach((button, wordIndex) => button.setAttribute('aria-pressed', String(wordIndex === selected)));
-    buttons[selected].focus();
-  }
-  previous.onclick = () => selectWord(selected - 1);
-  next.onclick = () => selectWord(selected + 1);
-  wordsLine.onkeydown = event => {
-    if (!['ArrowLeft', 'ArrowRight'].includes(event.key)) return;
-    event.preventDefault(); selectWord(selected + (event.key === 'ArrowRight' ? 1 : -1));
-  };
-  controls.append(previous, next); container.append(controls, wordsLine); selectWord(0);
-}
-
-function renderJourney() {
-  const root = byId('renew-journey'); root.replaceChildren();
-  const { scripture, verses, step } = renew.journey;
-  const stepLabels = { read: 'Step 1 of 5 · Read', emphasise: 'Step 2 of 5 · Emphasise', notice: 'Step 3 of 5 · Notice' };
-  const label = document.createElement('p'); label.className = 'eyebrow'; label.textContent = stepLabels[step];
-  const heading = document.createElement('h2'); heading.textContent = scripture.reference.label;
-  const guidance = document.createElement('p'); guidance.className = 'renew-guidance'; guidance.textContent = step === 'read' ? 'Read this Scripture slowly three times. Let the words settle before moving on.' : step === 'emphasise' ? 'Move the emphasis through one word at a time. Notice which word begins to stand out.' : 'Which word catches your attention? What comes to mind as you sit with it?';
-  root.append(label, heading, guidance);
-  if (step === 'read') {
-    const passage = document.createElement('p'); passage.className = 'renew-passage';
-    verses.forEach(({ verse, text }) => { const number = document.createElement('sup'); number.textContent = verse; passage.append(number, document.createTextNode(` ${text} `)); });
-    const next = document.createElement('button'); next.type = 'button'; next.className = 'renew-begin'; next.textContent = 'Continue to Emphasise'; next.onclick = () => { renew.journey.step = 'emphasise'; renderJourney(); };
-    root.append(passage, next);
-  } else if (step === 'emphasise') {
-    renderWords(root, verses.map(item => item.text).join(' '));
-    const back = document.createElement('button'); back.type = 'button'; back.textContent = 'Read again'; back.onclick = () => { renew.journey.step = 'read'; renderJourney(); };
-    const notice = document.createElement('button'); notice.type = 'button'; notice.className = 'renew-begin'; notice.textContent = 'Continue to Notice'; notice.onclick = () => { renew.journey.step = 'notice'; renderJourney(); };
-    root.append(back, notice);
-  } else {
-    const wordLabel = document.createElement('label'); wordLabel.htmlFor = 'renew-notice-word'; wordLabel.textContent = 'My word';
-    const word = document.createElement('input'); word.id = 'renew-notice-word'; word.type = 'text'; word.maxLength = 80; word.value = renew.journey.noticeWord || ''; word.autocomplete = 'off';
-    const reflectionLabel = document.createElement('label'); reflectionLabel.htmlFor = 'renew-notice-reflection'; reflectionLabel.textContent = 'What does it bring to mind, and why might it resonate?';
-    const reflection = document.createElement('textarea'); reflection.id = 'renew-notice-reflection'; reflection.rows = 5; reflection.maxLength = 1200; reflection.value = renew.journey.noticeReflection || '';
-    const status = document.createElement('p'); status.className = 'session-meta'; status.textContent = 'This draft stays on this device and is not yet saved as a reflection.';
-    const back = document.createElement('button'); back.type = 'button'; back.textContent = 'Back to Emphasise'; back.onclick = () => { renew.journey.noticeWord = word.value; renew.journey.noticeReflection = reflection.value; renew.journey.step = 'emphasise'; renderJourney(); };
-    root.append(wordLabel, word, reflectionLabel, reflection, status, back);
-  }
-}
-
-async function beginJourney(theme) {
-  const scripture = theme.scriptures[Math.floor(Math.random() * theme.scriptures.length)];
-  const root = byId('renew-journey'); root.hidden = false; root.textContent = 'Loading Scripture…';
-  try { renew.journey = { scripture, verses: await resolvePassage(scripture.reference), step: 'read' }; renderJourney(); }
-  catch (error) { root.textContent = error.message; }
-}
-
-function showSelection(theme) {
-  renew.selected = theme; renew.journey = null;
-  const selection = byId('renew-selection'); selection.hidden = false; selection.replaceChildren(); byId('renew-journey').hidden = true;
-  const heading = document.createElement('h3'); heading.textContent = theme.name;
-  const note = document.createElement('p'); note.textContent = theme.description;
-  const status = document.createElement('p'); status.className = 'session-meta'; status.textContent = theme.scriptures.length ? `${theme.scriptures.length} Scripture ${theme.scriptures.length === 1 ? 'passage is' : 'passages are'} ready for the RENEW journey.` : 'This example theme is ready for an authored Scripture library.';
-  selection.append(heading, note, status);
-  if (theme.scriptures.length) { const begin = document.createElement('button'); begin.type = 'button'; begin.className = 'renew-begin'; begin.textContent = 'Begin meditation'; begin.onclick = () => beginJourney(theme); selection.append(begin); }
-}
-
-function renderThemes() {
-  const grid = byId('renew-theme-grid'); grid.replaceChildren();
-  message(renew.themes.length ? `${renew.themes.length} theme${renew.themes.length === 1 ? '' : 's'} available. Scripture collections are managed separately.` : 'No themes are available yet.');
-  for (const theme of renew.themes) {
-    const button = document.createElement('button'); button.type = 'button'; button.className = 'renew-theme';
-    const name = document.createElement('strong'); name.textContent = theme.name;
-    const description = document.createElement('span'); description.textContent = theme.description;
-    button.append(name, description); button.onclick = () => showSelection(theme); grid.append(button);
-  }
-}
-
-async function loadRenewLibraries() {
-  try {
-    const response = await fetch(RENEW_REGISTRY);
-    if (!response.ok) throw new Error('The Scripture library registry could not be loaded.');
-    const registry = await response.json();
-    if (registry.schemaVersion !== '1.0' || !Array.isArray(registry.libraries)) throw new Error('The Scripture library registry is not valid.');
-    const loaded = await Promise.all(registry.libraries.map(async library => {
-      if (!validText(library.id) || !validText(library.name) || !['placeholder', 'active'].includes(library.status)) throw new Error('The Scripture library registry contains an invalid library.');
-      return library.status === 'active' ? loadActiveLibrary(library) : normalizeThemes(library, library.themes);
-    }));
-    renew.themes = loaded.flat(); renderThemes();
-  } catch (error) { renew.themes = []; byId('renew-theme-grid').replaceChildren(); message(error.message); }
-}
-
-export function initRenew() { loadRenewLibraries(); }
+const RENEW_REGISTRY='./data/renew/libraries.json', STORE='renew-reflections-v1';
+const renew={themes:[],selected:null,journey:null}; const $=id=>document.getElementById(id);
+const text=v=>typeof v==='string'&&v.trim(); const message=v=>{$('renew-library-status').textContent=v};
+const needs=[['certainty','Certainty','Am I safe? Do I know what is going to happen?'],['variety','Variety','Do I need something different?'],['significance','Significance','Do I matter? Does my life count?'],['connection','Love and connection','Do I belong? Am I not alone?'],['growth','Growth','Am I becoming? Am I moving forward?'],['contribution','Contribution','Does my life make a difference?']];
+function saved(){try{const v=JSON.parse(localStorage.getItem(STORE)||'[]');return Array.isArray(v)?v:[]}catch{return[]}} function persist(v){try{localStorage.setItem(STORE,JSON.stringify(v));return true}catch{return false}}
+function validRef(r){return r&&text(r.book)&&text(r.label)&&['startChapter','startVerse','endChapter','endVerse'].every(k=>Number.isInteger(r[k]))}
+function themes(library,items){if(!Array.isArray(items))throw Error(`${library.name} does not contain themes.`);return items.map(t=>{if(!text(t.id)||!text(t.name)||!text(t.description)||!Array.isArray(t.scriptures)||t.scriptures.some(s=>!text(s.id)||!validRef(s.reference)))throw Error(`${library.name} contains an invalid theme.`);return {...t,libraryStatus:library.status}})}
+async function loadActiveLibrary(l){if(!text(l.file))throw Error(`${l.name} needs a library file.`);const r=await fetch(l.file);if(!r.ok)throw Error(`${l.name} could not be loaded.`);const d=await r.json();if(d.schemaVersion!=='1.0')throw Error(`${l.name} has an unsupported library format.`);return themes(l,d.themes)}
+async function resolvePassage(r){const response=await fetch(`./data/books/${r.book}.json`);if(!response.ok)throw Error(`Could not load ${r.label}.`);const book=await response.json(),out=[];for(let c=r.startChapter;c<=r.endChapter;c++){const vs=book.chapters[String(c)]||{},start=c===r.startChapter?r.startVerse:1,end=c===r.endChapter?r.endVerse:Math.max(...Object.keys(vs).map(Number));for(let v=start;v<=end;v++){if(!vs[String(v)])throw Error(`${r.label} does not match the available BSB text.`);out.push({verse:v,text:vs[String(v)]})}}return out}
+function button(label,action,primary=false){const b=document.createElement('button');b.type='button';b.textContent=label;if(primary)b.className='renew-begin';b.onclick=action;return b}
+function renderWords(root,words){const controls=document.createElement('div'),line=document.createElement('div');controls.className='renew-emphasis-controls';line.className='renew-words';let selected=0;const buttons=words.match(/\S+/g).map((word,i)=>{const b=button(word,()=>choose(i));b.className='renew-word';b.setAttribute('aria-pressed','false');line.append(b,document.createTextNode(' '));return b});function choose(i){selected=(i+buttons.length)%buttons.length;buttons.forEach((b,x)=>b.setAttribute('aria-pressed',String(x===selected)));buttons[selected].focus()} line.onkeydown=e=>{if(['ArrowLeft','ArrowRight'].includes(e.key)){e.preventDefault();choose(selected+(e.key==='ArrowRight'?1:-1))}};controls.append(button('Previous word',()=>choose(selected-1)),button('Next word',()=>choose(selected+1)));root.append(controls,line);choose(0)}
+function current(){return renew.journey} function go(step){current().step=step;renderJourney()}
+function renderJourney(){const root=$('renew-journey'),j=current();root.replaceChildren();const names={read:'Read',emphasise:'Emphasise',notice:'Notice',explore:'Explore',walk:'Walk',closing:'Closing'};const tag=document.createElement('p');tag.className='eyebrow';tag.textContent=j.step==='closing'?'RENEW':`Step ${['read','emphasise','notice','explore','walk'].indexOf(j.step)+1} of 5 · ${names[j.step]}`;const title=document.createElement('h2');title.textContent=j.scripture.reference.label;root.append(tag,title);
+ if(j.step==='read'){root.append(Object.assign(document.createElement('p'),{className:'renew-guidance',textContent:'Read this Scripture slowly three times. Let the words settle before moving on.'}));const p=document.createElement('p');p.className='renew-passage';j.verses.forEach(x=>{const n=document.createElement('sup');n.textContent=x.verse;p.append(n,document.createTextNode(` ${x.text} `))});root.append(p,button('Continue to Emphasise',()=>go('emphasise'),true));return}
+ if(j.step==='emphasise'){root.append(Object.assign(document.createElement('p'),{className:'renew-guidance',textContent:'Move the emphasis through one word at a time. Notice which word begins to stand out.'}));renderWords(root,j.verses.map(x=>x.text).join(' '));root.append(button('Read again',()=>go('read')),button('Continue to Notice',()=>go('notice'),true));return}
+ if(j.step==='notice'){root.append(Object.assign(document.createElement('p'),{className:'renew-guidance',textContent:'Which word catches your attention? What comes to mind as you sit with it?'}));const w=document.createElement('input');w.value=j.noticeWord||'';w.placeholder='My word';w.maxLength=80;const t=document.createElement('textarea');t.rows=5;t.maxLength=1200;t.value=j.notice||'';t.placeholder='What does it bring to mind, and why might it resonate?';const save=()=>{j.noticeWord=w.value;j.notice=t.value};root.append(w,t,button('Back to Emphasise',()=>{save();go('emphasise')}),button('Continue to Explore',()=>{save();go('explore')},true));return}
+ if(j.step==='explore'){root.append(Object.assign(document.createElement('p'),{className:'renew-guidance',textContent:'These needs are a reflection aid, not biblical doctrine. Which might sit beneath your response?'}));const grid=document.createElement('div');grid.className='renew-needs';j.needs??=[];needs.forEach(([id,name,q])=>{const b=button(`${name} — ${q}`,()=>{j.needs=j.needs.includes(id)?j.needs.filter(x=>x!==id):[...j.needs,id];renderJourney()});b.className='renew-need';b.setAttribute('aria-pressed',String(j.needs.includes(id)));grid.append(b)});root.append(grid,button('Back to Notice',()=>go('notice')),button('Continue to Walk',()=>go('walk'),true));return}
+ if(j.step==='walk'){root.append(Object.assign(document.createElement('p'),{className:'renew-guidance',textContent:'What does it look like to walk with God meeting this need this week?'}));const t=document.createElement('textarea');t.rows=5;t.maxLength=1200;t.value=j.walk||'';t.placeholder='Write an optional response';root.append(t,button('Back to Explore',()=>{j.walk=t.value;go('explore')}),button('Finish meditation',()=>{j.walk=t.value;go('closing')},true));return}
+ root.append(Object.assign(document.createElement('p'),{className:'renew-guidance',textContent:'Let the Word renew you. You may save this reflection on this device, or return to the themes.'}));root.append(button('Save reflection',()=>{const all=saved();all.unshift({id:crypto.randomUUID(),createdAt:new Date().toISOString(),theme:renew.selected.name,reference:j.scripture.reference.label,word:j.noticeWord||'',notice:j.notice||'',needs:j.needs||[],walk:j.walk||''});if(persist(all)){$('renew-reflections').hidden=false;root.append(Object.assign(document.createElement('p'),{className:'session-meta',textContent:'Saved to this device.'}))}else root.append(Object.assign(document.createElement('p'),{className:'session-meta',textContent:'This browser could not save the reflection.'}))},true),button('Return to themes',()=>showSelection(renew.selected)))}
+async function begin(theme){const s=theme.scriptures[Math.floor(Math.random()*theme.scriptures.length)],root=$('renew-journey');root.hidden=false;root.textContent='Loading Scripture…';try{renew.journey={scripture:s,verses:await resolvePassage(s.reference),step:'read'};renderJourney()}catch(e){root.textContent=e.message}}
+function showSelection(theme){renew.selected=theme;renew.journey=null;const selection=$('renew-selection'),journey=$('renew-journey');selection.hidden=false;journey.hidden=true;selection.replaceChildren();const h=document.createElement('h3');h.textContent=theme.name;const p=document.createElement('p');p.textContent=theme.description;selection.append(h,p,button('Begin meditation',()=>begin(theme),true))}
+function showReflections(){const selection=$('renew-selection');selection.hidden=false;selection.replaceChildren();const h=document.createElement('h3');h.textContent='My Reflections';selection.append(h);const all=saved();if(!all.length)selection.append(Object.assign(document.createElement('p'),{textContent:'No saved reflections yet.'}));all.forEach(x=>{const p=document.createElement('p');p.textContent=`${x.reference} · ${x.word||'No word saved'} · ${new Date(x.createdAt).toLocaleDateString()}`;selection.append(p)});selection.append(button('Back to themes',()=>{$('renew-selection').hidden=true}))}
+function renderThemes(){const grid=$('renew-theme-grid');grid.replaceChildren();message(`${renew.themes.length} test theme${renew.themes.length===1?'':'s'} available. Replace this test library before a content release.`);renew.themes.forEach(t=>{const b=button('',()=>showSelection(t));b.className='renew-theme';const n=document.createElement('strong');n.textContent=t.name;const d=document.createElement('span');d.textContent=t.description;b.append(n,d);grid.append(b)});$('renew-reflections').hidden=!saved().length}
+async function load(){try{const r=await fetch(RENEW_REGISTRY);if(!r.ok)throw Error('The Scripture library registry could not be loaded.');const reg=await r.json();if(reg.schemaVersion!=='1.0'||!Array.isArray(reg.libraries))throw Error('The Scripture library registry is not valid.');renew.themes=(await Promise.all(reg.libraries.map(l=>l.status==='active'?loadActiveLibrary(l):themes(l,l.themes)))).flat();renderThemes()}catch(e){$('renew-theme-grid').replaceChildren();message(e.message)}}
+export function initRenew(){$('renew-reflections').onclick=showReflections;load()}
