@@ -16,4 +16,33 @@ Library entry shape:
 }
 ```
 
-Future active library files will contain a theme, ordered Scripture references, BSB source reference, and optional RENEW guidance. They must not embed copied Bible text where existing BSB book data can be used.
+`status` is either `placeholder` or `active`. An active library must have a `file` value. The adapter fetches that file and merges its themes at runtime.
+
+Future active library files use this shape:
+
+```json
+{
+  "schemaVersion": "1.0",
+  "libraryVersion": "1.0",
+  "themes": [
+    {
+      "id": "rest",
+      "name": "Rest",
+      "description": "A short, reader-facing description.",
+      "scriptures": [{
+        "id": "psalm-23-1",
+        "reference": {
+          "book": "PSA",
+          "label": "Psalm 23:1",
+          "startChapter": 23,
+          "startVerse": 1,
+          "endChapter": 23,
+          "endVerse": 1
+        }
+      }]
+    }
+  ]
+}
+```
+
+The reference points to the existing BSB book files. Do not put Scripture quotation text in a RENEW library. The library may contain only references and optional meditation metadata approved for publication.

@@ -1,12 +1,13 @@
 {
   "schemaVersion": "1.0",
-  "moduleVersion": "0.1",
+  "moduleVersion": "0.2",
   "updated": "2026-10-14",
   "libraries": [
     {
       "id": "starter-placeholders",
       "name": "Starter themes",
       "status": "placeholder",
+      "file": null,
       "themes": [
         { "id": "rest", "name": "Rest", "description": "A placeholder for Scripture on rest and renewal." },
         { "id": "courage", "name": "Courage", "description": "A placeholder for Scripture on courage and trust." },

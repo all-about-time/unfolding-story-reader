@@ -10,9 +10,9 @@
 
 ## Content and scope basis
 
-The supplied RENEW design decisions specify: begin at theme selection; request another Scripture only from that screen; guide Read, Emphasise, Notice, Explore, Respond; move manually through words; use six selectable exploration cards; retain a large Scripture focus with brief step guidance; save optional reflections locally with export/import; provide a quiet closing screen and optional save; show My Reflections on theme selection. The six needs are a reflection aid, not biblical doctrine. Scripture libraries and theme examples are placeholders at this stage.
+The supplied RENEW design decisions specify: begin at theme selection; request another Scripture only from that screen; guide Read, Emphasise, Notice, Explore, Walk; move manually through words; use six selectable exploration cards; retain a large Scripture focus with brief step guidance; save optional reflections locally with export/import; provide a quiet closing screen and optional save; show My Reflections on theme selection. The six needs are a reflection aid, not biblical doctrine. Scripture libraries and theme examples are placeholders at this stage.
 
-The three named original methodology documents were not present in the accessible repository or attached-thread file list during Version 0.1 assessment. No substantive meditation prompts or Scripture collection has been invented. When supplied, their wording and content will replace only the data and guidance layers.
+The original methodology sources are now held outside the repository: Let the Word Speak, its accompanying presentation, and Meditation Exercise. They establish the practice as Read three times, Emphasise each word, Notice the response, Explore the needs beneath it, then Walk in God's invitation. They also establish the worksheet questions for exploring external sources, personal responses, and walking with God. The source documents list example references but do not constitute an approved application Scripture library; those references are therefore not published as a library.
 
 ## Version checkpoints and acceptance criteria
 
@@ -23,7 +23,7 @@ The three named original methodology documents were not present in the accessibl
 | 0.3 | READ and EMPHASISE | Large central verse; manual tap/arrow word emphasis; keyboard operation; step guidance and optional Learn More. |
 | 0.4 | NOTICE | Optional short reflection field; draft state is local only and remains separate from the reading-plan progress. |
 | 0.5 | EXPLORE | Six selectable need cards, short explanations, and the External → Internal → Eternal prompts with the reflection-aid clarification. |
-| 0.6 | RESPOND and closing | Response prompt, quiet closing screen, optional reflection save. |
+| 0.6 | WALK and closing | Walk prompt, quiet closing screen, optional reflection save. |
 | 0.7 | My Reflections | Local reflection list, detail/reopen, optional export and import with schema validation. |
 | 0.8 | Library authoring and resilience | Documented library schema, malformed-library recovery, library version metadata, and no-index.html content updates. |
 | 0.9 | Accessibility and responsive review | Keyboard flow, focus management, labels, contrast, motion preferences, narrow and wide layouts. |
