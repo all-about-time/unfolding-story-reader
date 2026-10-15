@@ -1,4 +1,4 @@
-const CACHE = 'meditate-shell-v4';
+const CACHE = 'meditate-shell-v5';
 const SHELL = ['./', './index.html', './styles.css', './layout.css', './brand.css', './app.js', './brand.js', './pwa.js', './renew.js', './prayer.js', './data/sessions.json', './data/renew/libraries.json', './assets/meditate.png', './manifest.webmanifest'];
 self.addEventListener('install', event => event.waitUntil(caches.open(CACHE).then(cache => Promise.all(SHELL.map(path => cache.add(new Request(path, {cache: 'reload'}))))).then(() => self.skipWaiting())));
 self.addEventListener('activate', event => event.waitUntil(caches.keys().then(keys => Promise.all(keys.filter(key => key !== CACHE).map(key => caches.delete(key)))).then(() => self.clients.claim())));
