@@ -1,14 +1,29 @@
 {
   "schemaVersion": "1.0",
-  "moduleVersion": "0.2",
-  "updated": "2026-10-14",
+  "moduleVersion": "1.0-partial-review",
+  "updated": "2026-10-15",
   "libraries": [
     {
-      "id": "starter-placeholders",
-      "name": "Starter themes",
+      "id": "seasonal",
+      "name": "Seasonal",
       "status": "active",
-      "file": "./data/renew/libraries/experience-test.json",
+      "file": "./data/renew/libraries/seasonal.json",
+      "themes": []
+    },
+    {
+      "id": "im-feeling",
+      "name": "I'm Feeling…",
+      "status": "active",
+      "file": "./data/renew/libraries/im-feeling.json",
+      "themes": []
+    },
+    {
+      "id": "topics",
+      "name": "Topics",
+      "status": "active",
+      "file": "./data/renew/libraries/topics.json",
       "themes": []
     }
   ]
 }
+

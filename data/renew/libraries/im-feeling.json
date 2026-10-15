@@ -1,0 +1,3262 @@
+{
+  "schemaVersion": "1.0",
+  "libraryVersion": "1.0-partial-review",
+  "updated": "2026-10-15",
+  "purpose": "RENEW Scripture references generated from the partially reviewed curation workbook. Seasonal decisions are applied; non-seasonal inclusions remain provisional pending further review.",
+  "curationStatus": "partially-reviewed",
+  "themes": [
+    {
+      "id": "overwhelmed",
+      "name": "Overwhelmed",
+      "description": "Scripture for when you are feeling overwhelmed.",
+      "curationStatus": "provisional",
+      "scriptures": [
+        {
+          "id": "mat-11-28-30",
+          "reference": {
+            "book": "MAT",
+            "label": "Matthew 11:28-30",
+            "startChapter": 11,
+            "startVerse": 28,
+            "endChapter": 11,
+            "endVerse": 30
+          },
+          "curationStatus": "provisional"
+        },
+        {
+          "id": "psa-61-2",
+          "reference": {
+            "book": "PSA",
+            "label": "Psalm 61:2",
+            "startChapter": 61,
+            "startVerse": 2,
+            "endChapter": 61,
+            "endVerse": 2
+          },
+          "curationStatus": "provisional"
+        },
+        {
+          "id": "psa-46-1",
+          "reference": {
+            "book": "PSA",
+            "label": "Psalm 46:1",
+            "startChapter": 46,
+            "startVerse": 1,
+            "endChapter": 46,
+            "endVerse": 1
+          },
+          "curationStatus": "provisional"
+        },
+        {
+          "id": "1pe-5-7",
+          "reference": {
+            "book": "1PE",
+            "label": "1 Peter 5:7",
+            "startChapter": 5,
+            "startVerse": 7,
+            "endChapter": 5,
+            "endVerse": 7
+          },
+          "curationStatus": "provisional"
+        },
+        {
+          "id": "isa-40-29",
+          "reference": {
+            "book": "ISA",
+            "label": "Isaiah 40:29",
+            "startChapter": 40,
+            "startVerse": 29,
+            "endChapter": 40,
+            "endVerse": 29
+          },
+          "curationStatus": "provisional"
+        },
+        {
+          "id": "psa-55-22",
+          "reference": {
+            "book": "PSA",
+            "label": "Psalm 55:22",
+            "startChapter": 55,
+            "startVerse": 22,
+            "endChapter": 55,
+            "endVerse": 22
+          },
+          "curationStatus": "provisional"
+        },
+        {
+          "id": "2co-12-9",
+          "reference": {
+            "book": "2CO",
+            "label": "2 Corinthians 12:9",
+            "startChapter": 12,
+            "startVerse": 9,
+            "endChapter": 12,
+            "endVerse": 9
+          },
+          "curationStatus": "provisional"
+        },
+        {
+          "id": "exo-14-14",
+          "reference": {
+            "book": "EXO",
+            "label": "Exodus 14:14",
+            "startChapter": 14,
+            "startVerse": 14,
+            "endChapter": 14,
+            "endVerse": 14
+          },
+          "curationStatus": "provisional"
+        }
+      ],
+      "group": "Emotions"
+    },
+    {
+      "id": "anxious",
+      "name": "Anxious",
+      "description": "Scripture for when you are feeling anxious.",
+      "curationStatus": "provisional",
+      "scriptures": [
+        {
+          "id": "php-4-6-7",
+          "reference": {
+            "book": "PHP",
+            "label": "Philippians 4:6-7",
+            "startChapter": 4,
+            "startVerse": 6,
+            "endChapter": 4,
+            "endVerse": 7
+          },
+          "curationStatus": "provisional"
+        },
+        {
+          "id": "mat-6-26",
+          "reference": {
+            "book": "MAT",
+            "label": "Matthew 6:26",
+            "startChapter": 6,
+            "startVerse": 26,
+            "endChapter": 6,
+            "endVerse": 26
+          },
+          "curationStatus": "reviewed"
+        },
+        {
+          "id": "mat-6-34",
+          "reference": {
+            "book": "MAT",
+            "label": "Matthew 6:34",
+            "startChapter": 6,
+            "startVerse": 34,
+            "endChapter": 6,
+            "endVerse": 34
+          },
+          "curationStatus": "provisional"
+        },
+        {
+          "id": "jhn-14-27",
+          "reference": {
+            "book": "JHN",
+            "label": "John 14:27",
+            "startChapter": 14,
+            "startVerse": 27,
+            "endChapter": 14,
+            "endVerse": 27
+          },
+          "curationStatus": "provisional"
+        },
+        {
+          "id": "1pe-5-7",
+          "reference": {
+            "book": "1PE",
+            "label": "1 Peter 5:7",
+            "startChapter": 5,
+            "startVerse": 7,
+            "endChapter": 5,
+            "endVerse": 7
+          },
+          "curationStatus": "provisional"
+        },
+        {
+          "id": "psa-94-19",
+          "reference": {
+            "book": "PSA",
+            "label": "Psalm 94:19",
+            "startChapter": 94,
+            "startVerse": 19,
+            "endChapter": 94,
+            "endVerse": 19
+          },
+          "curationStatus": "provisional"
+        },
+        {
+          "id": "isa-26-3",
+          "reference": {
+            "book": "ISA",
+            "label": "Isaiah 26:3",
+            "startChapter": 26,
+            "startVerse": 3,
+            "endChapter": 26,
+            "endVerse": 3
+          },
+          "curationStatus": "provisional"
+        },
+        {
+          "id": "psa-56-3",
+          "reference": {
+            "book": "PSA",
+            "label": "Psalm 56:3",
+            "startChapter": 56,
+            "startVerse": 3,
+            "endChapter": 56,
+            "endVerse": 3
+          },
+          "curationStatus": "provisional"
+        }
+      ],
+      "group": "Emotions"
+    },
+    {
+      "id": "ashamed",
+      "name": "Ashamed",
+      "description": "Scripture for when you are feeling ashamed.",
+      "curationStatus": "provisional",
+      "scriptures": [
+        {
+          "id": "rom-8-1",
+          "reference": {
+            "book": "ROM",
+            "label": "Romans 8:1",
+            "startChapter": 8,
+            "startVerse": 1,
+            "endChapter": 8,
+            "endVerse": 1
+          },
+          "curationStatus": "provisional"
+        },
+        {
+          "id": "psa-103-12",
+          "reference": {
+            "book": "PSA",
+            "label": "Psalm 103:12",
+            "startChapter": 103,
+            "startVerse": 12,
+            "endChapter": 103,
+            "endVerse": 12
+          },
+          "curationStatus": "provisional"
+        },
+        {
+          "id": "1jn-1-9",
+          "reference": {
+            "book": "1JN",
+            "label": "1 John 1:9",
+            "startChapter": 1,
+            "startVerse": 9,
+            "endChapter": 1,
+            "endVerse": 9
+          },
+          "curationStatus": "provisional"
+        },
+        {
+          "id": "heb-4-16",
+          "reference": {
+            "book": "HEB",
+            "label": "Hebrews 4:16",
+            "startChapter": 4,
+            "startVerse": 16,
+            "endChapter": 4,
+            "endVerse": 16
+          },
+          "curationStatus": "provisional"
+        },
+        {
+          "id": "2co-5-17",
+          "reference": {
+            "book": "2CO",
+            "label": "2 Corinthians 5:17",
+            "startChapter": 5,
+            "startVerse": 17,
+            "endChapter": 5,
+            "endVerse": 17
+          },
+          "curationStatus": "provisional"
+        },
+        {
+          "id": "rom-5-8",
+          "reference": {
+            "book": "ROM",
+            "label": "Romans 5:8",
+            "startChapter": 5,
+            "startVerse": 8,
+            "endChapter": 5,
+            "endVerse": 8
+          },
+          "curationStatus": "provisional"
+        }
+      ],
+      "group": "Emotions"
+    },
+    {
+      "id": "lost",
+      "name": "Lost",
+      "description": "Scripture for when you are feeling lost.",
+      "curationStatus": "provisional",
+      "scriptures": [
+        {
+          "id": "psa-119-105",
+          "reference": {
+            "book": "PSA",
+            "label": "Psalm 119:105",
+            "startChapter": 119,
+            "startVerse": 105,
+            "endChapter": 119,
+            "endVerse": 105
+          },
+          "curationStatus": "provisional"
+        },
+        {
+          "id": "pro-3-5-6",
+          "reference": {
+            "book": "PRO",
+            "label": "Proverbs 3:5-6",
+            "startChapter": 3,
+            "startVerse": 5,
+            "endChapter": 3,
+            "endVerse": 6
+          },
+          "curationStatus": "provisional"
+        },
+        {
+          "id": "jhn-14-6",
+          "reference": {
+            "book": "JHN",
+            "label": "John 14:6",
+            "startChapter": 14,
+            "startVerse": 6,
+            "endChapter": 14,
+            "endVerse": 6
+          },
+          "curationStatus": "provisional"
+        },
+        {
+          "id": "jhn-10-27",
+          "reference": {
+            "book": "JHN",
+            "label": "John 10:27",
+            "startChapter": 10,
+            "startVerse": 27,
+            "endChapter": 10,
+            "endVerse": 27
+          },
+          "curationStatus": "provisional"
+        },
+        {
+          "id": "jas-1-5",
+          "reference": {
+            "book": "JAS",
+            "label": "James 1:5",
+            "startChapter": 1,
+            "startVerse": 5,
+            "endChapter": 1,
+            "endVerse": 5
+          },
+          "curationStatus": "provisional"
+        }
+      ],
+      "group": "Emotions"
+    },
+    {
+      "id": "lonely",
+      "name": "Lonely",
+      "description": "Scripture for when you are feeling lonely.",
+      "curationStatus": "provisional",
+      "scriptures": [
+        {
+          "id": "deu-31-8",
+          "reference": {
+            "book": "DEU",
+            "label": "Deuteronomy 31:8",
+            "startChapter": 31,
+            "startVerse": 8,
+            "endChapter": 31,
+            "endVerse": 8
+          },
+          "curationStatus": "provisional"
+        },
+        {
+          "id": "mat-28-20",
+          "reference": {
+            "book": "MAT",
+            "label": "Matthew 28:20",
+            "startChapter": 28,
+            "startVerse": 20,
+            "endChapter": 28,
+            "endVerse": 20
+          },
+          "curationStatus": "provisional"
+        },
+        {
+          "id": "psa-23-4",
+          "reference": {
+            "book": "PSA",
+            "label": "Psalm 23:4",
+            "startChapter": 23,
+            "startVerse": 4,
+            "endChapter": 23,
+            "endVerse": 4
+          },
+          "curationStatus": "provisional"
+        },
+        {
+          "id": "jhn-14-18",
+          "reference": {
+            "book": "JHN",
+            "label": "John 14:18",
+            "startChapter": 14,
+            "startVerse": 18,
+            "endChapter": 14,
+            "endVerse": 18
+          },
+          "curationStatus": "provisional"
+        },
+        {
+          "id": "isa-41-10",
+          "reference": {
+            "book": "ISA",
+            "label": "Isaiah 41:10",
+            "startChapter": 41,
+            "startVerse": 10,
+            "endChapter": 41,
+            "endVerse": 10
+          },
+          "curationStatus": "provisional"
+        },
+        {
+          "id": "rom-8-38-39",
+          "reference": {
+            "book": "ROM",
+            "label": "Romans 8:38-39",
+            "startChapter": 8,
+            "startVerse": 38,
+            "endChapter": 8,
+            "endVerse": 39
+          },
+          "curationStatus": "provisional"
+        }
+      ],
+      "group": "Emotions"
+    },
+    {
+      "id": "afraid",
+      "name": "Afraid",
+      "description": "Scripture for when you are feeling afraid.",
+      "curationStatus": "provisional",
+      "scriptures": [
+        {
+          "id": "isa-41-10",
+          "reference": {
+            "book": "ISA",
+            "label": "Isaiah 41:10",
+            "startChapter": 41,
+            "startVerse": 10,
+            "endChapter": 41,
+            "endVerse": 10
+          },
+          "curationStatus": "provisional"
+        },
+        {
+          "id": "jos-1-9",
+          "reference": {
+            "book": "JOS",
+            "label": "Joshua 1:9",
+            "startChapter": 1,
+            "startVerse": 9,
+            "endChapter": 1,
+            "endVerse": 9
+          },
+          "curationStatus": "provisional"
+        },
+        {
+          "id": "2ti-1-7",
+          "reference": {
+            "book": "2TI",
+            "label": "2 Timothy 1:7",
+            "startChapter": 1,
+            "startVerse": 7,
+            "endChapter": 1,
+            "endVerse": 7
+          },
+          "curationStatus": "provisional"
+        },
+        {
+          "id": "psa-56-3-4",
+          "reference": {
+            "book": "PSA",
+            "label": "Psalm 56:3-4",
+            "startChapter": 56,
+            "startVerse": 3,
+            "endChapter": 56,
+            "endVerse": 4
+          },
+          "curationStatus": "provisional"
+        },
+        {
+          "id": "psa-27-1",
+          "reference": {
+            "book": "PSA",
+            "label": "Psalm 27:1",
+            "startChapter": 27,
+            "startVerse": 1,
+            "endChapter": 27,
+            "endVerse": 1
+          },
+          "curationStatus": "provisional"
+        },
+        {
+          "id": "jhn-14-27",
+          "reference": {
+            "book": "JHN",
+            "label": "John 14:27",
+            "startChapter": 14,
+            "startVerse": 27,
+            "endChapter": 14,
+            "endVerse": 27
+          },
+          "curationStatus": "provisional"
+        },
+        {
+          "id": "deu-31-6",
+          "reference": {
+            "book": "DEU",
+            "label": "Deuteronomy 31:6",
+            "startChapter": 31,
+            "startVerse": 6,
+            "endChapter": 31,
+            "endVerse": 6
+          },
+          "curationStatus": "provisional"
+        },
+        {
+          "id": "mrk-4-39-40",
+          "reference": {
+            "book": "MRK",
+            "label": "Mark 4:39-40",
+            "startChapter": 4,
+            "startVerse": 39,
+            "endChapter": 4,
+            "endVerse": 40
+          },
+          "curationStatus": "provisional"
+        }
+      ],
+      "group": "Emotions"
+    },
+    {
+      "id": "rejected",
+      "name": "Rejected",
+      "description": "Scripture for when you are feeling rejected.",
+      "curationStatus": "provisional",
+      "scriptures": [
+        {
+          "id": "psa-27-10",
+          "reference": {
+            "book": "PSA",
+            "label": "Psalm 27:10",
+            "startChapter": 27,
+            "startVerse": 10,
+            "endChapter": 27,
+            "endVerse": 10
+          },
+          "curationStatus": "provisional"
+        },
+        {
+          "id": "jhn-6-37",
+          "reference": {
+            "book": "JHN",
+            "label": "John 6:37",
+            "startChapter": 6,
+            "startVerse": 37,
+            "endChapter": 6,
+            "endVerse": 37
+          },
+          "curationStatus": "provisional"
+        },
+        {
+          "id": "1pe-2-4",
+          "reference": {
+            "book": "1PE",
+            "label": "1 Peter 2:4",
+            "startChapter": 2,
+            "startVerse": 4,
+            "endChapter": 2,
+            "endVerse": 4
+          },
+          "curationStatus": "provisional"
+        },
+        {
+          "id": "rom-8-31",
+          "reference": {
+            "book": "ROM",
+            "label": "Romans 8:31",
+            "startChapter": 8,
+            "startVerse": 31,
+            "endChapter": 8,
+            "endVerse": 31
+          },
+          "curationStatus": "provisional"
+        },
+        {
+          "id": "eph-1-5",
+          "reference": {
+            "book": "EPH",
+            "label": "Ephesians 1:5",
+            "startChapter": 1,
+            "startVerse": 5,
+            "endChapter": 1,
+            "endVerse": 5
+          },
+          "curationStatus": "provisional"
+        },
+        {
+          "id": "psa-34-18",
+          "reference": {
+            "book": "PSA",
+            "label": "Psalm 34:18",
+            "startChapter": 34,
+            "startVerse": 18,
+            "endChapter": 34,
+            "endVerse": 18
+          },
+          "curationStatus": "provisional"
+        },
+        {
+          "id": "1jn-3-1",
+          "reference": {
+            "book": "1JN",
+            "label": "1 John 3:1",
+            "startChapter": 3,
+            "startVerse": 1,
+            "endChapter": 3,
+            "endVerse": 1
+          },
+          "curationStatus": "provisional"
+        }
+      ],
+      "group": "Emotions"
+    },
+    {
+      "id": "discouraged",
+      "name": "Discouraged",
+      "description": "Scripture for when you are feeling discouraged.",
+      "curationStatus": "provisional",
+      "scriptures": [
+        {
+          "id": "gal-6-9",
+          "reference": {
+            "book": "GAL",
+            "label": "Galatians 6:9",
+            "startChapter": 6,
+            "startVerse": 9,
+            "endChapter": 6,
+            "endVerse": 9
+          },
+          "curationStatus": "provisional"
+        },
+        {
+          "id": "isa-40-31",
+          "reference": {
+            "book": "ISA",
+            "label": "Isaiah 40:31",
+            "startChapter": 40,
+            "startVerse": 31,
+            "endChapter": 40,
+            "endVerse": 31
+          },
+          "curationStatus": "provisional"
+        },
+        {
+          "id": "2co-4-16-18",
+          "reference": {
+            "book": "2CO",
+            "label": "2 Corinthians 4:16-18",
+            "startChapter": 4,
+            "startVerse": 16,
+            "endChapter": 4,
+            "endVerse": 18
+          },
+          "curationStatus": "provisional"
+        },
+        {
+          "id": "psa-42-11",
+          "reference": {
+            "book": "PSA",
+            "label": "Psalm 42:11",
+            "startChapter": 42,
+            "startVerse": 11,
+            "endChapter": 42,
+            "endVerse": 11
+          },
+          "curationStatus": "provisional"
+        },
+        {
+          "id": "php-1-6",
+          "reference": {
+            "book": "PHP",
+            "label": "Philippians 1:6",
+            "startChapter": 1,
+            "startVerse": 6,
+            "endChapter": 1,
+            "endVerse": 6
+          },
+          "curationStatus": "provisional"
+        },
+        {
+          "id": "rom-15-13",
+          "reference": {
+            "book": "ROM",
+            "label": "Romans 15:13",
+            "startChapter": 15,
+            "startVerse": 13,
+            "endChapter": 15,
+            "endVerse": 13
+          },
+          "curationStatus": "provisional"
+        },
+        {
+          "id": "psa-31-24",
+          "reference": {
+            "book": "PSA",
+            "label": "Psalm 31:24",
+            "startChapter": 31,
+            "startVerse": 24,
+            "endChapter": 31,
+            "endVerse": 24
+          },
+          "curationStatus": "provisional"
+        },
+        {
+          "id": "heb-12-3",
+          "reference": {
+            "book": "HEB",
+            "label": "Hebrews 12:3",
+            "startChapter": 12,
+            "startVerse": 3,
+            "endChapter": 12,
+            "endVerse": 3
+          },
+          "curationStatus": "provisional"
+        }
+      ],
+      "group": "Emotions"
+    },
+    {
+      "id": "exhausted",
+      "name": "Exhausted",
+      "description": "Scripture for when you are feeling exhausted.",
+      "curationStatus": "provisional",
+      "scriptures": [
+        {
+          "id": "mat-11-28-30",
+          "reference": {
+            "book": "MAT",
+            "label": "Matthew 11:28-30",
+            "startChapter": 11,
+            "startVerse": 28,
+            "endChapter": 11,
+            "endVerse": 30
+          },
+          "curationStatus": "provisional"
+        },
+        {
+          "id": "psa-23-2-3",
+          "reference": {
+            "book": "PSA",
+            "label": "Psalm 23:2-3",
+            "startChapter": 23,
+            "startVerse": 2,
+            "endChapter": 23,
+            "endVerse": 3
+          },
+          "curationStatus": "provisional"
+        },
+        {
+          "id": "isa-40-29-31",
+          "reference": {
+            "book": "ISA",
+            "label": "Isaiah 40:29-31",
+            "startChapter": 40,
+            "startVerse": 29,
+            "endChapter": 40,
+            "endVerse": 31
+          },
+          "curationStatus": "provisional"
+        },
+        {
+          "id": "exo-33-14",
+          "reference": {
+            "book": "EXO",
+            "label": "Exodus 33:14",
+            "startChapter": 33,
+            "startVerse": 14,
+            "endChapter": 33,
+            "endVerse": 14
+          },
+          "curationStatus": "provisional"
+        },
+        {
+          "id": "mrk-6-31",
+          "reference": {
+            "book": "MRK",
+            "label": "Mark 6:31",
+            "startChapter": 6,
+            "startVerse": 31,
+            "endChapter": 6,
+            "endVerse": 31
+          },
+          "curationStatus": "provisional"
+        },
+        {
+          "id": "psa-127-2",
+          "reference": {
+            "book": "PSA",
+            "label": "Psalm 127:2",
+            "startChapter": 127,
+            "startVerse": 2,
+            "endChapter": 127,
+            "endVerse": 2
+          },
+          "curationStatus": "provisional"
+        },
+        {
+          "id": "2co-12-9",
+          "reference": {
+            "book": "2CO",
+            "label": "2 Corinthians 12:9",
+            "startChapter": 12,
+            "startVerse": 9,
+            "endChapter": 12,
+            "endVerse": 9
+          },
+          "curationStatus": "provisional"
+        },
+        {
+          "id": "psa-62-1",
+          "reference": {
+            "book": "PSA",
+            "label": "Psalm 62:1",
+            "startChapter": 62,
+            "startVerse": 1,
+            "endChapter": 62,
+            "endVerse": 1
+          },
+          "curationStatus": "provisional"
+        }
+      ],
+      "group": "Emotions"
+    },
+    {
+      "id": "inadequate",
+      "name": "Inadequate",
+      "description": "Scripture for when you are feeling inadequate.",
+      "curationStatus": "provisional",
+      "scriptures": [
+        {
+          "id": "2co-12-9",
+          "reference": {
+            "book": "2CO",
+            "label": "2 Corinthians 12:9",
+            "startChapter": 12,
+            "startVerse": 9,
+            "endChapter": 12,
+            "endVerse": 9
+          },
+          "curationStatus": "provisional"
+        },
+        {
+          "id": "1co-1-27",
+          "reference": {
+            "book": "1CO",
+            "label": "1 Corinthians 1:27",
+            "startChapter": 1,
+            "startVerse": 27,
+            "endChapter": 1,
+            "endVerse": 27
+          },
+          "curationStatus": "provisional"
+        },
+        {
+          "id": "php-4-13",
+          "reference": {
+            "book": "PHP",
+            "label": "Philippians 4:13",
+            "startChapter": 4,
+            "startVerse": 13,
+            "endChapter": 4,
+            "endVerse": 13
+          },
+          "curationStatus": "provisional"
+        },
+        {
+          "id": "2co-3-5",
+          "reference": {
+            "book": "2CO",
+            "label": "2 Corinthians 3:5",
+            "startChapter": 3,
+            "startVerse": 5,
+            "endChapter": 3,
+            "endVerse": 5
+          },
+          "curationStatus": "provisional"
+        },
+        {
+          "id": "eph-2-10",
+          "reference": {
+            "book": "EPH",
+            "label": "Ephesians 2:10",
+            "startChapter": 2,
+            "startVerse": 10,
+            "endChapter": 2,
+            "endVerse": 10
+          },
+          "curationStatus": "provisional"
+        },
+        {
+          "id": "jer-1-6-8",
+          "reference": {
+            "book": "JER",
+            "label": "Jeremiah 1:6-8",
+            "startChapter": 1,
+            "startVerse": 6,
+            "endChapter": 1,
+            "endVerse": 8
+          },
+          "curationStatus": "provisional"
+        },
+        {
+          "id": "1ti-4-12",
+          "reference": {
+            "book": "1TI",
+            "label": "1 Timothy 4:12",
+            "startChapter": 4,
+            "startVerse": 12,
+            "endChapter": 4,
+            "endVerse": 12
+          },
+          "curationStatus": "provisional"
+        }
+      ],
+      "group": "Emotions"
+    },
+    {
+      "id": "angry",
+      "name": "Angry",
+      "description": "Scripture for when you are feeling angry.",
+      "curationStatus": "provisional",
+      "scriptures": [
+        {
+          "id": "jas-1-19-20",
+          "reference": {
+            "book": "JAS",
+            "label": "James 1:19-20",
+            "startChapter": 1,
+            "startVerse": 19,
+            "endChapter": 1,
+            "endVerse": 20
+          },
+          "curationStatus": "provisional"
+        },
+        {
+          "id": "eph-4-26-27",
+          "reference": {
+            "book": "EPH",
+            "label": "Ephesians 4:26-27",
+            "startChapter": 4,
+            "startVerse": 26,
+            "endChapter": 4,
+            "endVerse": 27
+          },
+          "curationStatus": "provisional"
+        },
+        {
+          "id": "pro-15-1",
+          "reference": {
+            "book": "PRO",
+            "label": "Proverbs 15:1",
+            "startChapter": 15,
+            "startVerse": 1,
+            "endChapter": 15,
+            "endVerse": 1
+          },
+          "curationStatus": "provisional"
+        },
+        {
+          "id": "pro-14-29",
+          "reference": {
+            "book": "PRO",
+            "label": "Proverbs 14:29",
+            "startChapter": 14,
+            "startVerse": 29,
+            "endChapter": 14,
+            "endVerse": 29
+          },
+          "curationStatus": "provisional"
+        },
+        {
+          "id": "psa-37-8",
+          "reference": {
+            "book": "PSA",
+            "label": "Psalm 37:8",
+            "startChapter": 37,
+            "startVerse": 8,
+            "endChapter": 37,
+            "endVerse": 8
+          },
+          "curationStatus": "provisional"
+        },
+        {
+          "id": "rom-12-19",
+          "reference": {
+            "book": "ROM",
+            "label": "Romans 12:19",
+            "startChapter": 12,
+            "startVerse": 19,
+            "endChapter": 12,
+            "endVerse": 19
+          },
+          "curationStatus": "provisional"
+        },
+        {
+          "id": "col-3-8",
+          "reference": {
+            "book": "COL",
+            "label": "Colossians 3:8",
+            "startChapter": 3,
+            "startVerse": 8,
+            "endChapter": 3,
+            "endVerse": 8
+          },
+          "curationStatus": "provisional"
+        },
+        {
+          "id": "mat-5-44",
+          "reference": {
+            "book": "MAT",
+            "label": "Matthew 5:44",
+            "startChapter": 5,
+            "startVerse": 44,
+            "endChapter": 5,
+            "endVerse": 44
+          },
+          "curationStatus": "provisional"
+        }
+      ],
+      "group": "Emotions"
+    },
+    {
+      "id": "disappointed",
+      "name": "Disappointed",
+      "description": "Scripture for when you are feeling disappointed.",
+      "curationStatus": "provisional",
+      "scriptures": [
+        {
+          "id": "psa-34-18",
+          "reference": {
+            "book": "PSA",
+            "label": "Psalm 34:18",
+            "startChapter": 34,
+            "startVerse": 18,
+            "endChapter": 34,
+            "endVerse": 18
+          },
+          "curationStatus": "provisional"
+        },
+        {
+          "id": "pro-13-12",
+          "reference": {
+            "book": "PRO",
+            "label": "Proverbs 13:12",
+            "startChapter": 13,
+            "startVerse": 12,
+            "endChapter": 13,
+            "endVerse": 12
+          },
+          "curationStatus": "provisional"
+        },
+        {
+          "id": "rom-5-3-5",
+          "reference": {
+            "book": "ROM",
+            "label": "Romans 5:3-5",
+            "startChapter": 5,
+            "startVerse": 3,
+            "endChapter": 5,
+            "endVerse": 5
+          },
+          "curationStatus": "provisional"
+        },
+        {
+          "id": "psa-62-5",
+          "reference": {
+            "book": "PSA",
+            "label": "Psalm 62:5",
+            "startChapter": 62,
+            "startVerse": 5,
+            "endChapter": 62,
+            "endVerse": 5
+          },
+          "curationStatus": "provisional"
+        },
+        {
+          "id": "hab-3-17-19",
+          "reference": {
+            "book": "HAB",
+            "label": "Habakkuk 3:17-19",
+            "startChapter": 3,
+            "startVerse": 17,
+            "endChapter": 3,
+            "endVerse": 19
+          },
+          "curationStatus": "provisional"
+        },
+        {
+          "id": "lam-3-22-24",
+          "reference": {
+            "book": "LAM",
+            "label": "Lamentations 3:22-24",
+            "startChapter": 3,
+            "startVerse": 22,
+            "endChapter": 3,
+            "endVerse": 24
+          },
+          "curationStatus": "provisional"
+        },
+        {
+          "id": "isa-55-8-9",
+          "reference": {
+            "book": "ISA",
+            "label": "Isaiah 55:8-9",
+            "startChapter": 55,
+            "startVerse": 8,
+            "endChapter": 55,
+            "endVerse": 9
+          },
+          "curationStatus": "provisional"
+        },
+        {
+          "id": "psa-42-11",
+          "reference": {
+            "book": "PSA",
+            "label": "Psalm 42:11",
+            "startChapter": 42,
+            "startVerse": 11,
+            "endChapter": 42,
+            "endVerse": 11
+          },
+          "curationStatus": "provisional"
+        }
+      ],
+      "group": "Emotions"
+    },
+    {
+      "id": "hopeful",
+      "name": "Hopeful",
+      "description": "Scripture for when you are feeling hopeful.",
+      "curationStatus": "provisional",
+      "scriptures": [
+        {
+          "id": "rom-15-13",
+          "reference": {
+            "book": "ROM",
+            "label": "Romans 15:13",
+            "startChapter": 15,
+            "startVerse": 13,
+            "endChapter": 15,
+            "endVerse": 13
+          },
+          "curationStatus": "provisional"
+        },
+        {
+          "id": "heb-10-23",
+          "reference": {
+            "book": "HEB",
+            "label": "Hebrews 10:23",
+            "startChapter": 10,
+            "startVerse": 23,
+            "endChapter": 10,
+            "endVerse": 23
+          },
+          "curationStatus": "provisional"
+        },
+        {
+          "id": "jer-29-11",
+          "reference": {
+            "book": "JER",
+            "label": "Jeremiah 29:11",
+            "startChapter": 29,
+            "startVerse": 11,
+            "endChapter": 29,
+            "endVerse": 11
+          },
+          "curationStatus": "provisional"
+        },
+        {
+          "id": "psa-130-5",
+          "reference": {
+            "book": "PSA",
+            "label": "Psalm 130:5",
+            "startChapter": 130,
+            "startVerse": 5,
+            "endChapter": 130,
+            "endVerse": 5
+          },
+          "curationStatus": "provisional"
+        },
+        {
+          "id": "1pe-1-3",
+          "reference": {
+            "book": "1PE",
+            "label": "1 Peter 1:3",
+            "startChapter": 1,
+            "startVerse": 3,
+            "endChapter": 1,
+            "endVerse": 3
+          },
+          "curationStatus": "provisional"
+        },
+        {
+          "id": "rom-8-24-25",
+          "reference": {
+            "book": "ROM",
+            "label": "Romans 8:24-25",
+            "startChapter": 8,
+            "startVerse": 24,
+            "endChapter": 8,
+            "endVerse": 25
+          },
+          "curationStatus": "provisional"
+        },
+        {
+          "id": "isa-40-31",
+          "reference": {
+            "book": "ISA",
+            "label": "Isaiah 40:31",
+            "startChapter": 40,
+            "startVerse": 31,
+            "endChapter": 40,
+            "endVerse": 31
+          },
+          "curationStatus": "provisional"
+        },
+        {
+          "id": "lam-3-24",
+          "reference": {
+            "book": "LAM",
+            "label": "Lamentations 3:24",
+            "startChapter": 3,
+            "startVerse": 24,
+            "endChapter": 3,
+            "endVerse": 24
+          },
+          "curationStatus": "provisional"
+        }
+      ],
+      "group": "Emotions"
+    },
+    {
+      "id": "grateful",
+      "name": "Grateful",
+      "description": "Scripture for when you are feeling grateful.",
+      "curationStatus": "provisional",
+      "scriptures": [
+        {
+          "id": "1th-5-18",
+          "reference": {
+            "book": "1TH",
+            "label": "1 Thessalonians 5:18",
+            "startChapter": 5,
+            "startVerse": 18,
+            "endChapter": 5,
+            "endVerse": 18
+          },
+          "curationStatus": "provisional"
+        },
+        {
+          "id": "psa-107-1",
+          "reference": {
+            "book": "PSA",
+            "label": "Psalm 107:1",
+            "startChapter": 107,
+            "startVerse": 1,
+            "endChapter": 107,
+            "endVerse": 1
+          },
+          "curationStatus": "provisional"
+        },
+        {
+          "id": "col-3-17",
+          "reference": {
+            "book": "COL",
+            "label": "Colossians 3:17",
+            "startChapter": 3,
+            "startVerse": 17,
+            "endChapter": 3,
+            "endVerse": 17
+          },
+          "curationStatus": "provisional"
+        },
+        {
+          "id": "jas-1-17",
+          "reference": {
+            "book": "JAS",
+            "label": "James 1:17",
+            "startChapter": 1,
+            "startVerse": 17,
+            "endChapter": 1,
+            "endVerse": 17
+          },
+          "curationStatus": "provisional"
+        },
+        {
+          "id": "psa-103-2",
+          "reference": {
+            "book": "PSA",
+            "label": "Psalm 103:2",
+            "startChapter": 103,
+            "startVerse": 2,
+            "endChapter": 103,
+            "endVerse": 2
+          },
+          "curationStatus": "provisional"
+        },
+        {
+          "id": "php-4-6",
+          "reference": {
+            "book": "PHP",
+            "label": "Philippians 4:6",
+            "startChapter": 4,
+            "startVerse": 6,
+            "endChapter": 4,
+            "endVerse": 6
+          },
+          "curationStatus": "provisional"
+        },
+        {
+          "id": "col-2-7",
+          "reference": {
+            "book": "COL",
+            "label": "Colossians 2:7",
+            "startChapter": 2,
+            "startVerse": 7,
+            "endChapter": 2,
+            "endVerse": 7
+          },
+          "curationStatus": "provisional"
+        },
+        {
+          "id": "psa-118-1",
+          "reference": {
+            "book": "PSA",
+            "label": "Psalm 118:1",
+            "startChapter": 118,
+            "startVerse": 1,
+            "endChapter": 118,
+            "endVerse": 1
+          },
+          "curationStatus": "provisional"
+        }
+      ],
+      "group": "Emotions"
+    },
+    {
+      "id": "joyful",
+      "name": "Joyful",
+      "description": "Scripture for when you are feeling joyful.",
+      "curationStatus": "provisional",
+      "scriptures": [
+        {
+          "id": "php-4-4",
+          "reference": {
+            "book": "PHP",
+            "label": "Philippians 4:4",
+            "startChapter": 4,
+            "startVerse": 4,
+            "endChapter": 4,
+            "endVerse": 4
+          },
+          "curationStatus": "provisional"
+        },
+        {
+          "id": "psa-16-11",
+          "reference": {
+            "book": "PSA",
+            "label": "Psalm 16:11",
+            "startChapter": 16,
+            "startVerse": 11,
+            "endChapter": 16,
+            "endVerse": 11
+          },
+          "curationStatus": "provisional"
+        },
+        {
+          "id": "neh-8-10",
+          "reference": {
+            "book": "NEH",
+            "label": "Nehemiah 8:10",
+            "startChapter": 8,
+            "startVerse": 10,
+            "endChapter": 8,
+            "endVerse": 10
+          },
+          "curationStatus": "provisional"
+        },
+        {
+          "id": "jhn-15-11",
+          "reference": {
+            "book": "JHN",
+            "label": "John 15:11",
+            "startChapter": 15,
+            "startVerse": 11,
+            "endChapter": 15,
+            "endVerse": 11
+          },
+          "curationStatus": "provisional"
+        },
+        {
+          "id": "rom-15-13",
+          "reference": {
+            "book": "ROM",
+            "label": "Romans 15:13",
+            "startChapter": 15,
+            "startVerse": 13,
+            "endChapter": 15,
+            "endVerse": 13
+          },
+          "curationStatus": "provisional"
+        },
+        {
+          "id": "psa-100-2",
+          "reference": {
+            "book": "PSA",
+            "label": "Psalm 100:2",
+            "startChapter": 100,
+            "startVerse": 2,
+            "endChapter": 100,
+            "endVerse": 2
+          },
+          "curationStatus": "provisional"
+        },
+        {
+          "id": "1th-5-16",
+          "reference": {
+            "book": "1TH",
+            "label": "1 Thessalonians 5:16",
+            "startChapter": 5,
+            "startVerse": 16,
+            "endChapter": 5,
+            "endVerse": 16
+          },
+          "curationStatus": "provisional"
+        },
+        {
+          "id": "jas-1-2-3",
+          "reference": {
+            "book": "JAS",
+            "label": "James 1:2-3",
+            "startChapter": 1,
+            "startVerse": 2,
+            "endChapter": 1,
+            "endVerse": 3
+          },
+          "curationStatus": "provisional"
+        }
+      ],
+      "group": "Emotions"
+    },
+    {
+      "id": "content",
+      "name": "Content",
+      "description": "Scripture for when you are feeling content.",
+      "curationStatus": "provisional",
+      "scriptures": [
+        {
+          "id": "php-4-11-13",
+          "reference": {
+            "book": "PHP",
+            "label": "Philippians 4:11-13",
+            "startChapter": 4,
+            "startVerse": 11,
+            "endChapter": 4,
+            "endVerse": 13
+          },
+          "curationStatus": "provisional"
+        },
+        {
+          "id": "1ti-6-6-8",
+          "reference": {
+            "book": "1TI",
+            "label": "1 Timothy 6:6-8",
+            "startChapter": 6,
+            "startVerse": 6,
+            "endChapter": 6,
+            "endVerse": 8
+          },
+          "curationStatus": "provisional"
+        },
+        {
+          "id": "heb-13-5",
+          "reference": {
+            "book": "HEB",
+            "label": "Hebrews 13:5",
+            "startChapter": 13,
+            "startVerse": 5,
+            "endChapter": 13,
+            "endVerse": 5
+          },
+          "curationStatus": "provisional"
+        },
+        {
+          "id": "psa-23-1",
+          "reference": {
+            "book": "PSA",
+            "label": "Psalm 23:1",
+            "startChapter": 23,
+            "startVerse": 1,
+            "endChapter": 23,
+            "endVerse": 1
+          },
+          "curationStatus": "provisional"
+        },
+        {
+          "id": "mat-6-33",
+          "reference": {
+            "book": "MAT",
+            "label": "Matthew 6:33",
+            "startChapter": 6,
+            "startVerse": 33,
+            "endChapter": 6,
+            "endVerse": 33
+          },
+          "curationStatus": "provisional"
+        },
+        {
+          "id": "pro-15-16",
+          "reference": {
+            "book": "PRO",
+            "label": "Proverbs 15:16",
+            "startChapter": 15,
+            "startVerse": 16,
+            "endChapter": 15,
+            "endVerse": 16
+          },
+          "curationStatus": "provisional"
+        },
+        {
+          "id": "2co-12-10",
+          "reference": {
+            "book": "2CO",
+            "label": "2 Corinthians 12:10",
+            "startChapter": 12,
+            "startVerse": 10,
+            "endChapter": 12,
+            "endVerse": 10
+          },
+          "curationStatus": "provisional"
+        },
+        {
+          "id": "psa-16-5-6",
+          "reference": {
+            "book": "PSA",
+            "label": "Psalm 16:5-6",
+            "startChapter": 16,
+            "startVerse": 5,
+            "endChapter": 16,
+            "endVerse": 6
+          },
+          "curationStatus": "provisional"
+        }
+      ],
+      "group": "Emotions"
+    },
+    {
+      "id": "facing-a-decision",
+      "name": "Facing a Decision",
+      "description": "Scripture for seeking wisdom and direction in a decision.",
+      "curationStatus": "provisional",
+      "scriptures": [
+        {
+          "id": "jas-1-5",
+          "reference": {
+            "book": "JAS",
+            "label": "James 1:5",
+            "startChapter": 1,
+            "startVerse": 5,
+            "endChapter": 1,
+            "endVerse": 5
+          },
+          "curationStatus": "provisional"
+        },
+        {
+          "id": "pro-3-5-6",
+          "reference": {
+            "book": "PRO",
+            "label": "Proverbs 3:5-6",
+            "startChapter": 3,
+            "startVerse": 5,
+            "endChapter": 3,
+            "endVerse": 6
+          },
+          "curationStatus": "provisional"
+        },
+        {
+          "id": "psa-32-8",
+          "reference": {
+            "book": "PSA",
+            "label": "Psalm 32:8",
+            "startChapter": 32,
+            "startVerse": 8,
+            "endChapter": 32,
+            "endVerse": 8
+          },
+          "curationStatus": "provisional"
+        },
+        {
+          "id": "isa-30-21",
+          "reference": {
+            "book": "ISA",
+            "label": "Isaiah 30:21",
+            "startChapter": 30,
+            "startVerse": 21,
+            "endChapter": 30,
+            "endVerse": 21
+          },
+          "curationStatus": "provisional"
+        },
+        {
+          "id": "pro-16-9",
+          "reference": {
+            "book": "PRO",
+            "label": "Proverbs 16:9",
+            "startChapter": 16,
+            "startVerse": 9,
+            "endChapter": 16,
+            "endVerse": 9
+          },
+          "curationStatus": "provisional"
+        },
+        {
+          "id": "psa-25-4-5",
+          "reference": {
+            "book": "PSA",
+            "label": "Psalm 25:4-5",
+            "startChapter": 25,
+            "startVerse": 4,
+            "endChapter": 25,
+            "endVerse": 5
+          },
+          "curationStatus": "provisional"
+        },
+        {
+          "id": "col-3-15",
+          "reference": {
+            "book": "COL",
+            "label": "Colossians 3:15",
+            "startChapter": 3,
+            "startVerse": 15,
+            "endChapter": 3,
+            "endVerse": 15
+          },
+          "curationStatus": "provisional"
+        },
+        {
+          "id": "rom-12-2",
+          "reference": {
+            "book": "ROM",
+            "label": "Romans 12:2",
+            "startChapter": 12,
+            "startVerse": 2,
+            "endChapter": 12,
+            "endVerse": 2
+          },
+          "curationStatus": "provisional"
+        }
+      ],
+      "group": "Circumstances"
+    },
+    {
+      "id": "waiting-for-an-answer",
+      "name": "Waiting for an Answer",
+      "description": "Scripture for patience and trust while waiting for an answer.",
+      "curationStatus": "provisional",
+      "scriptures": [
+        {
+          "id": "psa-27-14",
+          "reference": {
+            "book": "PSA",
+            "label": "Psalm 27:14",
+            "startChapter": 27,
+            "startVerse": 14,
+            "endChapter": 27,
+            "endVerse": 14
+          },
+          "curationStatus": "provisional"
+        },
+        {
+          "id": "isa-40-31",
+          "reference": {
+            "book": "ISA",
+            "label": "Isaiah 40:31",
+            "startChapter": 40,
+            "startVerse": 31,
+            "endChapter": 40,
+            "endVerse": 31
+          },
+          "curationStatus": "provisional"
+        },
+        {
+          "id": "psa-130-5-6",
+          "reference": {
+            "book": "PSA",
+            "label": "Psalm 130:5-6",
+            "startChapter": 130,
+            "startVerse": 5,
+            "endChapter": 130,
+            "endVerse": 6
+          },
+          "curationStatus": "provisional"
+        },
+        {
+          "id": "hab-2-3",
+          "reference": {
+            "book": "HAB",
+            "label": "Habakkuk 2:3",
+            "startChapter": 2,
+            "startVerse": 3,
+            "endChapter": 2,
+            "endVerse": 3
+          },
+          "curationStatus": "provisional"
+        },
+        {
+          "id": "lam-3-25-26",
+          "reference": {
+            "book": "LAM",
+            "label": "Lamentations 3:25-26",
+            "startChapter": 3,
+            "startVerse": 25,
+            "endChapter": 3,
+            "endVerse": 26
+          },
+          "curationStatus": "provisional"
+        },
+        {
+          "id": "rom-8-25",
+          "reference": {
+            "book": "ROM",
+            "label": "Romans 8:25",
+            "startChapter": 8,
+            "startVerse": 25,
+            "endChapter": 8,
+            "endVerse": 25
+          },
+          "curationStatus": "provisional"
+        },
+        {
+          "id": "psa-37-7",
+          "reference": {
+            "book": "PSA",
+            "label": "Psalm 37:7",
+            "startChapter": 37,
+            "startVerse": 7,
+            "endChapter": 37,
+            "endVerse": 7
+          },
+          "curationStatus": "provisional"
+        },
+        {
+          "id": "jas-5-7-8",
+          "reference": {
+            "book": "JAS",
+            "label": "James 5:7-8",
+            "startChapter": 5,
+            "startVerse": 7,
+            "endChapter": 5,
+            "endVerse": 8
+          },
+          "curationStatus": "provisional"
+        }
+      ],
+      "group": "Circumstances"
+    },
+    {
+      "id": "facing-uncertainty",
+      "name": "Facing Uncertainty",
+      "description": "Scripture for trusting God when the way ahead is uncertain.",
+      "curationStatus": "provisional",
+      "scriptures": [
+        {
+          "id": "mat-6-33-34",
+          "reference": {
+            "book": "MAT",
+            "label": "Matthew 6:33-34",
+            "startChapter": 6,
+            "startVerse": 33,
+            "endChapter": 6,
+            "endVerse": 34
+          },
+          "curationStatus": "provisional"
+        },
+        {
+          "id": "pro-16-9",
+          "reference": {
+            "book": "PRO",
+            "label": "Proverbs 16:9",
+            "startChapter": 16,
+            "startVerse": 9,
+            "endChapter": 16,
+            "endVerse": 9
+          },
+          "curationStatus": "provisional"
+        },
+        {
+          "id": "heb-11-1",
+          "reference": {
+            "book": "HEB",
+            "label": "Hebrews 11:1",
+            "startChapter": 11,
+            "startVerse": 1,
+            "endChapter": 11,
+            "endVerse": 1
+          },
+          "curationStatus": "provisional"
+        },
+        {
+          "id": "psa-46-1-2",
+          "reference": {
+            "book": "PSA",
+            "label": "Psalm 46:1-2",
+            "startChapter": 46,
+            "startVerse": 1,
+            "endChapter": 46,
+            "endVerse": 2
+          },
+          "curationStatus": "provisional"
+        },
+        {
+          "id": "isa-41-10",
+          "reference": {
+            "book": "ISA",
+            "label": "Isaiah 41:10",
+            "startChapter": 41,
+            "startVerse": 10,
+            "endChapter": 41,
+            "endVerse": 10
+          },
+          "curationStatus": "provisional"
+        },
+        {
+          "id": "jas-4-13-15",
+          "reference": {
+            "book": "JAS",
+            "label": "James 4:13-15",
+            "startChapter": 4,
+            "startVerse": 13,
+            "endChapter": 4,
+            "endVerse": 15
+          },
+          "curationStatus": "provisional"
+        },
+        {
+          "id": "2co-5-7",
+          "reference": {
+            "book": "2CO",
+            "label": "2 Corinthians 5:7",
+            "startChapter": 5,
+            "startVerse": 7,
+            "endChapter": 5,
+            "endVerse": 7
+          },
+          "curationStatus": "provisional"
+        },
+        {
+          "id": "psa-121-1-2",
+          "reference": {
+            "book": "PSA",
+            "label": "Psalm 121:1-2",
+            "startChapter": 121,
+            "startVerse": 1,
+            "endChapter": 121,
+            "endVerse": 2
+          },
+          "curationStatus": "provisional"
+        }
+      ],
+      "group": "Circumstances"
+    },
+    {
+      "id": "experiencing-conflict",
+      "name": "Experiencing Conflict",
+      "description": "Scripture for seeking wisdom and peace during conflict.",
+      "curationStatus": "provisional",
+      "scriptures": [
+        {
+          "id": "rom-12-18",
+          "reference": {
+            "book": "ROM",
+            "label": "Romans 12:18",
+            "startChapter": 12,
+            "startVerse": 18,
+            "endChapter": 12,
+            "endVerse": 18
+          },
+          "curationStatus": "provisional"
+        },
+        {
+          "id": "mat-5-9",
+          "reference": {
+            "book": "MAT",
+            "label": "Matthew 5:9",
+            "startChapter": 5,
+            "startVerse": 9,
+            "endChapter": 5,
+            "endVerse": 9
+          },
+          "curationStatus": "provisional"
+        },
+        {
+          "id": "pro-15-1",
+          "reference": {
+            "book": "PRO",
+            "label": "Proverbs 15:1",
+            "startChapter": 15,
+            "startVerse": 1,
+            "endChapter": 15,
+            "endVerse": 1
+          },
+          "curationStatus": "provisional"
+        },
+        {
+          "id": "eph-4-2-3",
+          "reference": {
+            "book": "EPH",
+            "label": "Ephesians 4:2-3",
+            "startChapter": 4,
+            "startVerse": 2,
+            "endChapter": 4,
+            "endVerse": 3
+          },
+          "curationStatus": "provisional"
+        },
+        {
+          "id": "jas-1-19",
+          "reference": {
+            "book": "JAS",
+            "label": "James 1:19",
+            "startChapter": 1,
+            "startVerse": 19,
+            "endChapter": 1,
+            "endVerse": 19
+          },
+          "curationStatus": "provisional"
+        },
+        {
+          "id": "col-3-13",
+          "reference": {
+            "book": "COL",
+            "label": "Colossians 3:13",
+            "startChapter": 3,
+            "startVerse": 13,
+            "endChapter": 3,
+            "endVerse": 13
+          },
+          "curationStatus": "provisional"
+        },
+        {
+          "id": "mat-18-15",
+          "reference": {
+            "book": "MAT",
+            "label": "Matthew 18:15",
+            "startChapter": 18,
+            "startVerse": 15,
+            "endChapter": 18,
+            "endVerse": 15
+          },
+          "curationStatus": "provisional"
+        },
+        {
+          "id": "rom-12-21",
+          "reference": {
+            "book": "ROM",
+            "label": "Romans 12:21",
+            "startChapter": 12,
+            "startVerse": 21,
+            "endChapter": 12,
+            "endVerse": 21
+          },
+          "curationStatus": "provisional"
+        }
+      ],
+      "group": "Circumstances"
+    },
+    {
+      "id": "feeling-stuck",
+      "name": "Feeling Stuck",
+      "description": "Scripture for seeking hope and a faithful next step.",
+      "curationStatus": "provisional",
+      "scriptures": [
+        {
+          "id": "isa-43-19",
+          "reference": {
+            "book": "ISA",
+            "label": "Isaiah 43:19",
+            "startChapter": 43,
+            "startVerse": 19,
+            "endChapter": 43,
+            "endVerse": 19
+          },
+          "curationStatus": "provisional"
+        },
+        {
+          "id": "php-3-13-14",
+          "reference": {
+            "book": "PHP",
+            "label": "Philippians 3:13-14",
+            "startChapter": 3,
+            "startVerse": 13,
+            "endChapter": 3,
+            "endVerse": 14
+          },
+          "curationStatus": "provisional"
+        },
+        {
+          "id": "psa-40-1-3",
+          "reference": {
+            "book": "PSA",
+            "label": "Psalm 40:1-3",
+            "startChapter": 40,
+            "startVerse": 1,
+            "endChapter": 40,
+            "endVerse": 3
+          },
+          "curationStatus": "provisional"
+        },
+        {
+          "id": "2co-5-17",
+          "reference": {
+            "book": "2CO",
+            "label": "2 Corinthians 5:17",
+            "startChapter": 5,
+            "startVerse": 17,
+            "endChapter": 5,
+            "endVerse": 17
+          },
+          "curationStatus": "provisional"
+        },
+        {
+          "id": "pro-3-5-6",
+          "reference": {
+            "book": "PRO",
+            "label": "Proverbs 3:5-6",
+            "startChapter": 3,
+            "startVerse": 5,
+            "endChapter": 3,
+            "endVerse": 6
+          },
+          "curationStatus": "provisional"
+        },
+        {
+          "id": "psa-37-23-24",
+          "reference": {
+            "book": "PSA",
+            "label": "Psalm 37:23-24",
+            "startChapter": 37,
+            "startVerse": 23,
+            "endChapter": 37,
+            "endVerse": 24
+          },
+          "curationStatus": "provisional"
+        },
+        {
+          "id": "exo-14-13-14",
+          "reference": {
+            "book": "EXO",
+            "label": "Exodus 14:13-14",
+            "startChapter": 14,
+            "startVerse": 13,
+            "endChapter": 14,
+            "endVerse": 14
+          },
+          "curationStatus": "provisional"
+        },
+        {
+          "id": "gal-6-9",
+          "reference": {
+            "book": "GAL",
+            "label": "Galatians 6:9",
+            "startChapter": 6,
+            "startVerse": 9,
+            "endChapter": 6,
+            "endVerse": 9
+          },
+          "curationStatus": "provisional"
+        }
+      ],
+      "group": "Circumstances"
+    },
+    {
+      "id": "experiencing-failure",
+      "name": "Experiencing Failure",
+      "description": "Scripture for receiving grace and direction after failure.",
+      "curationStatus": "provisional",
+      "scriptures": [
+        {
+          "id": "pro-24-16",
+          "reference": {
+            "book": "PRO",
+            "label": "Proverbs 24:16",
+            "startChapter": 24,
+            "startVerse": 16,
+            "endChapter": 24,
+            "endVerse": 16
+          },
+          "curationStatus": "provisional"
+        },
+        {
+          "id": "php-1-6",
+          "reference": {
+            "book": "PHP",
+            "label": "Philippians 1:6",
+            "startChapter": 1,
+            "startVerse": 6,
+            "endChapter": 1,
+            "endVerse": 6
+          },
+          "curationStatus": "provisional"
+        },
+        {
+          "id": "rom-8-1",
+          "reference": {
+            "book": "ROM",
+            "label": "Romans 8:1",
+            "startChapter": 8,
+            "startVerse": 1,
+            "endChapter": 8,
+            "endVerse": 1
+          },
+          "curationStatus": "provisional"
+        },
+        {
+          "id": "psa-37-23-24",
+          "reference": {
+            "book": "PSA",
+            "label": "Psalm 37:23-24",
+            "startChapter": 37,
+            "startVerse": 23,
+            "endChapter": 37,
+            "endVerse": 24
+          },
+          "curationStatus": "provisional"
+        },
+        {
+          "id": "2co-12-9",
+          "reference": {
+            "book": "2CO",
+            "label": "2 Corinthians 12:9",
+            "startChapter": 12,
+            "startVerse": 9,
+            "endChapter": 12,
+            "endVerse": 9
+          },
+          "curationStatus": "provisional"
+        },
+        {
+          "id": "1jn-1-9",
+          "reference": {
+            "book": "1JN",
+            "label": "1 John 1:9",
+            "startChapter": 1,
+            "startVerse": 9,
+            "endChapter": 1,
+            "endVerse": 9
+          },
+          "curationStatus": "provisional"
+        },
+        {
+          "id": "luk-22-32",
+          "reference": {
+            "book": "LUK",
+            "label": "Luke 22:32",
+            "startChapter": 22,
+            "startVerse": 32,
+            "endChapter": 22,
+            "endVerse": 32
+          },
+          "curationStatus": "provisional"
+        },
+        {
+          "id": "mic-7-8",
+          "reference": {
+            "book": "MIC",
+            "label": "Micah 7:8",
+            "startChapter": 7,
+            "startVerse": 8,
+            "endChapter": 7,
+            "endVerse": 8
+          },
+          "curationStatus": "provisional"
+        }
+      ],
+      "group": "Circumstances"
+    },
+    {
+      "id": "facing-change",
+      "name": "Facing Change",
+      "description": "Scripture for trusting God through change and transition.",
+      "curationStatus": "provisional",
+      "scriptures": [
+        {
+          "id": "ecc-3-1",
+          "reference": {
+            "book": "ECC",
+            "label": "Ecclesiastes 3:1",
+            "startChapter": 3,
+            "startVerse": 1,
+            "endChapter": 3,
+            "endVerse": 1
+          },
+          "curationStatus": "provisional"
+        },
+        {
+          "id": "heb-13-8",
+          "reference": {
+            "book": "HEB",
+            "label": "Hebrews 13:8",
+            "startChapter": 13,
+            "startVerse": 8,
+            "endChapter": 13,
+            "endVerse": 8
+          },
+          "curationStatus": "provisional"
+        },
+        {
+          "id": "isa-43-19",
+          "reference": {
+            "book": "ISA",
+            "label": "Isaiah 43:19",
+            "startChapter": 43,
+            "startVerse": 19,
+            "endChapter": 43,
+            "endVerse": 19
+          },
+          "curationStatus": "provisional"
+        },
+        {
+          "id": "psa-46-1",
+          "reference": {
+            "book": "PSA",
+            "label": "Psalm 46:1",
+            "startChapter": 46,
+            "startVerse": 1,
+            "endChapter": 46,
+            "endVerse": 1
+          },
+          "curationStatus": "provisional"
+        },
+        {
+          "id": "deu-31-8",
+          "reference": {
+            "book": "DEU",
+            "label": "Deuteronomy 31:8",
+            "startChapter": 31,
+            "startVerse": 8,
+            "endChapter": 31,
+            "endVerse": 8
+          },
+          "curationStatus": "provisional"
+        },
+        {
+          "id": "mal-3-6",
+          "reference": {
+            "book": "MAL",
+            "label": "Malachi 3:6",
+            "startChapter": 3,
+            "startVerse": 6,
+            "endChapter": 3,
+            "endVerse": 6
+          },
+          "curationStatus": "provisional"
+        },
+        {
+          "id": "lam-3-22-23",
+          "reference": {
+            "book": "LAM",
+            "label": "Lamentations 3:22-23",
+            "startChapter": 3,
+            "startVerse": 22,
+            "endChapter": 3,
+            "endVerse": 23
+          },
+          "curationStatus": "provisional"
+        },
+        {
+          "id": "pro-16-9",
+          "reference": {
+            "book": "PRO",
+            "label": "Proverbs 16:9",
+            "startChapter": 16,
+            "startVerse": 9,
+            "endChapter": 16,
+            "endVerse": 9
+          },
+          "curationStatus": "provisional"
+        }
+      ],
+      "group": "Circumstances"
+    },
+    {
+      "id": "financial-pressure",
+      "name": "Financial Pressure",
+      "description": "Scripture for seeking God's provision and wisdom under financial pressure.",
+      "curationStatus": "provisional",
+      "scriptures": [
+        {
+          "id": "mat-6-25-26",
+          "reference": {
+            "book": "MAT",
+            "label": "Matthew 6:25-26",
+            "startChapter": 6,
+            "startVerse": 25,
+            "endChapter": 6,
+            "endVerse": 26
+          },
+          "curationStatus": "provisional"
+        },
+        {
+          "id": "php-4-19",
+          "reference": {
+            "book": "PHP",
+            "label": "Philippians 4:19",
+            "startChapter": 4,
+            "startVerse": 19,
+            "endChapter": 4,
+            "endVerse": 19
+          },
+          "curationStatus": "provisional"
+        },
+        {
+          "id": "mat-6-33",
+          "reference": {
+            "book": "MAT",
+            "label": "Matthew 6:33",
+            "startChapter": 6,
+            "startVerse": 33,
+            "endChapter": 6,
+            "endVerse": 33
+          },
+          "curationStatus": "provisional"
+        },
+        {
+          "id": "pro-3-9-10",
+          "reference": {
+            "book": "PRO",
+            "label": "Proverbs 3:9-10",
+            "startChapter": 3,
+            "startVerse": 9,
+            "endChapter": 3,
+            "endVerse": 10
+          },
+          "curationStatus": "provisional"
+        },
+        {
+          "id": "1ti-6-6-8",
+          "reference": {
+            "book": "1TI",
+            "label": "1 Timothy 6:6-8",
+            "startChapter": 6,
+            "startVerse": 6,
+            "endChapter": 6,
+            "endVerse": 8
+          },
+          "curationStatus": "provisional"
+        },
+        {
+          "id": "psa-37-25",
+          "reference": {
+            "book": "PSA",
+            "label": "Psalm 37:25",
+            "startChapter": 37,
+            "startVerse": 25,
+            "endChapter": 37,
+            "endVerse": 25
+          },
+          "curationStatus": "provisional"
+        },
+        {
+          "id": "heb-13-5",
+          "reference": {
+            "book": "HEB",
+            "label": "Hebrews 13:5",
+            "startChapter": 13,
+            "startVerse": 5,
+            "endChapter": 13,
+            "endVerse": 5
+          },
+          "curationStatus": "provisional"
+        },
+        {
+          "id": "2co-9-8",
+          "reference": {
+            "book": "2CO",
+            "label": "2 Corinthians 9:8",
+            "startChapter": 9,
+            "startVerse": 8,
+            "endChapter": 9,
+            "endVerse": 8
+          },
+          "curationStatus": "provisional"
+        }
+      ],
+      "group": "Circumstances"
+    },
+    {
+      "id": "relationship-difficulties",
+      "name": "Relationship Difficulties",
+      "description": "Scripture for wisdom, grace, and healing in difficult relationships.",
+      "curationStatus": "provisional",
+      "scriptures": [
+        {
+          "id": "col-3-13",
+          "reference": {
+            "book": "COL",
+            "label": "Colossians 3:13",
+            "startChapter": 3,
+            "startVerse": 13,
+            "endChapter": 3,
+            "endVerse": 13
+          },
+          "curationStatus": "provisional"
+        },
+        {
+          "id": "rom-12-10",
+          "reference": {
+            "book": "ROM",
+            "label": "Romans 12:10",
+            "startChapter": 12,
+            "startVerse": 10,
+            "endChapter": 12,
+            "endVerse": 10
+          },
+          "curationStatus": "provisional"
+        },
+        {
+          "id": "eph-4-32",
+          "reference": {
+            "book": "EPH",
+            "label": "Ephesians 4:32",
+            "startChapter": 4,
+            "startVerse": 32,
+            "endChapter": 4,
+            "endVerse": 32
+          },
+          "curationStatus": "provisional"
+        },
+        {
+          "id": "1co-13-4-7",
+          "reference": {
+            "book": "1CO",
+            "label": "1 Corinthians 13:4-7",
+            "startChapter": 13,
+            "startVerse": 4,
+            "endChapter": 13,
+            "endVerse": 7
+          },
+          "curationStatus": "provisional"
+        },
+        {
+          "id": "jas-1-19",
+          "reference": {
+            "book": "JAS",
+            "label": "James 1:19",
+            "startChapter": 1,
+            "startVerse": 19,
+            "endChapter": 1,
+            "endVerse": 19
+          },
+          "curationStatus": "provisional"
+        },
+        {
+          "id": "php-2-3-4",
+          "reference": {
+            "book": "PHP",
+            "label": "Philippians 2:3-4",
+            "startChapter": 2,
+            "startVerse": 3,
+            "endChapter": 2,
+            "endVerse": 4
+          },
+          "curationStatus": "provisional"
+        },
+        {
+          "id": "pro-17-17",
+          "reference": {
+            "book": "PRO",
+            "label": "Proverbs 17:17",
+            "startChapter": 17,
+            "startVerse": 17,
+            "endChapter": 17,
+            "endVerse": 17
+          },
+          "curationStatus": "provisional"
+        },
+        {
+          "id": "rom-12-18",
+          "reference": {
+            "book": "ROM",
+            "label": "Romans 12:18",
+            "startChapter": 12,
+            "startVerse": 18,
+            "endChapter": 12,
+            "endVerse": 18
+          },
+          "curationStatus": "provisional"
+        }
+      ],
+      "group": "Circumstances"
+    },
+    {
+      "id": "grieving-a-loss",
+      "name": "Grieving a Loss",
+      "description": "Scripture for bringing grief and loss into God's presence.",
+      "curationStatus": "provisional",
+      "scriptures": [
+        {
+          "id": "psa-34-18",
+          "reference": {
+            "book": "PSA",
+            "label": "Psalm 34:18",
+            "startChapter": 34,
+            "startVerse": 18,
+            "endChapter": 34,
+            "endVerse": 18
+          },
+          "curationStatus": "provisional"
+        },
+        {
+          "id": "mat-5-4",
+          "reference": {
+            "book": "MAT",
+            "label": "Matthew 5:4",
+            "startChapter": 5,
+            "startVerse": 4,
+            "endChapter": 5,
+            "endVerse": 4
+          },
+          "curationStatus": "provisional"
+        },
+        {
+          "id": "rev-21-4",
+          "reference": {
+            "book": "REV",
+            "label": "Revelation 21:4",
+            "startChapter": 21,
+            "startVerse": 4,
+            "endChapter": 21,
+            "endVerse": 4
+          },
+          "curationStatus": "provisional"
+        },
+        {
+          "id": "jhn-11-35",
+          "reference": {
+            "book": "JHN",
+            "label": "John 11:35",
+            "startChapter": 11,
+            "startVerse": 35,
+            "endChapter": 11,
+            "endVerse": 35
+          },
+          "curationStatus": "provisional"
+        },
+        {
+          "id": "psa-23-4",
+          "reference": {
+            "book": "PSA",
+            "label": "Psalm 23:4",
+            "startChapter": 23,
+            "startVerse": 4,
+            "endChapter": 23,
+            "endVerse": 4
+          },
+          "curationStatus": "provisional"
+        },
+        {
+          "id": "2co-1-3-4",
+          "reference": {
+            "book": "2CO",
+            "label": "2 Corinthians 1:3-4",
+            "startChapter": 1,
+            "startVerse": 3,
+            "endChapter": 1,
+            "endVerse": 4
+          },
+          "curationStatus": "provisional"
+        },
+        {
+          "id": "1th-4-13-14",
+          "reference": {
+            "book": "1TH",
+            "label": "1 Thessalonians 4:13-14",
+            "startChapter": 4,
+            "startVerse": 13,
+            "endChapter": 4,
+            "endVerse": 14
+          },
+          "curationStatus": "provisional"
+        },
+        {
+          "id": "psa-147-3",
+          "reference": {
+            "book": "PSA",
+            "label": "Psalm 147:3",
+            "startChapter": 147,
+            "startVerse": 3,
+            "endChapter": 147,
+            "endVerse": 3
+          },
+          "curationStatus": "provisional"
+        }
+      ],
+      "group": "Circumstances"
+    },
+    {
+      "id": "experiencing-injustice",
+      "name": "Experiencing Injustice",
+      "description": "Scripture for seeking God's justice, presence, and guidance.",
+      "curationStatus": "provisional",
+      "scriptures": [
+        {
+          "id": "mic-6-8",
+          "reference": {
+            "book": "MIC",
+            "label": "Micah 6:8",
+            "startChapter": 6,
+            "startVerse": 8,
+            "endChapter": 6,
+            "endVerse": 8
+          },
+          "curationStatus": "provisional"
+        },
+        {
+          "id": "rom-12-19",
+          "reference": {
+            "book": "ROM",
+            "label": "Romans 12:19",
+            "startChapter": 12,
+            "startVerse": 19,
+            "endChapter": 12,
+            "endVerse": 19
+          },
+          "curationStatus": "provisional"
+        },
+        {
+          "id": "psa-37-5-6",
+          "reference": {
+            "book": "PSA",
+            "label": "Psalm 37:5-6",
+            "startChapter": 37,
+            "startVerse": 5,
+            "endChapter": 37,
+            "endVerse": 6
+          },
+          "curationStatus": "provisional"
+        },
+        {
+          "id": "isa-1-17",
+          "reference": {
+            "book": "ISA",
+            "label": "Isaiah 1:17",
+            "startChapter": 1,
+            "startVerse": 17,
+            "endChapter": 1,
+            "endVerse": 17
+          },
+          "curationStatus": "provisional"
+        },
+        {
+          "id": "pro-21-3",
+          "reference": {
+            "book": "PRO",
+            "label": "Proverbs 21:3",
+            "startChapter": 21,
+            "startVerse": 3,
+            "endChapter": 21,
+            "endVerse": 3
+          },
+          "curationStatus": "provisional"
+        },
+        {
+          "id": "mat-5-6",
+          "reference": {
+            "book": "MAT",
+            "label": "Matthew 5:6",
+            "startChapter": 5,
+            "startVerse": 6,
+            "endChapter": 5,
+            "endVerse": 6
+          },
+          "curationStatus": "provisional"
+        },
+        {
+          "id": "1pe-2-23",
+          "reference": {
+            "book": "1PE",
+            "label": "1 Peter 2:23",
+            "startChapter": 2,
+            "startVerse": 23,
+            "endChapter": 2,
+            "endVerse": 23
+          },
+          "curationStatus": "provisional"
+        },
+        {
+          "id": "psa-10-17-18",
+          "reference": {
+            "book": "PSA",
+            "label": "Psalm 10:17-18",
+            "startChapter": 10,
+            "startVerse": 17,
+            "endChapter": 10,
+            "endVerse": 18
+          },
+          "curationStatus": "provisional"
+        }
+      ],
+      "group": "Circumstances"
+    },
+    {
+      "id": "starting-something-new",
+      "name": "Starting Something New",
+      "description": "Scripture for courage and trust when beginning something new.",
+      "curationStatus": "provisional",
+      "scriptures": [
+        {
+          "id": "jos-1-9",
+          "reference": {
+            "book": "JOS",
+            "label": "Joshua 1:9",
+            "startChapter": 1,
+            "startVerse": 9,
+            "endChapter": 1,
+            "endVerse": 9
+          },
+          "curationStatus": "provisional"
+        },
+        {
+          "id": "isa-43-19",
+          "reference": {
+            "book": "ISA",
+            "label": "Isaiah 43:19",
+            "startChapter": 43,
+            "startVerse": 19,
+            "endChapter": 43,
+            "endVerse": 19
+          },
+          "curationStatus": "provisional"
+        },
+        {
+          "id": "pro-3-5-6",
+          "reference": {
+            "book": "PRO",
+            "label": "Proverbs 3:5-6",
+            "startChapter": 3,
+            "startVerse": 5,
+            "endChapter": 3,
+            "endVerse": 6
+          },
+          "curationStatus": "provisional"
+        },
+        {
+          "id": "psa-90-17",
+          "reference": {
+            "book": "PSA",
+            "label": "Psalm 90:17",
+            "startChapter": 90,
+            "startVerse": 17,
+            "endChapter": 90,
+            "endVerse": 17
+          },
+          "curationStatus": "provisional"
+        },
+        {
+          "id": "php-1-6",
+          "reference": {
+            "book": "PHP",
+            "label": "Philippians 1:6",
+            "startChapter": 1,
+            "startVerse": 6,
+            "endChapter": 1,
+            "endVerse": 6
+          },
+          "curationStatus": "provisional"
+        },
+        {
+          "id": "2co-5-17",
+          "reference": {
+            "book": "2CO",
+            "label": "2 Corinthians 5:17",
+            "startChapter": 5,
+            "startVerse": 17,
+            "endChapter": 5,
+            "endVerse": 17
+          },
+          "curationStatus": "provisional"
+        },
+        {
+          "id": "deu-31-8",
+          "reference": {
+            "book": "DEU",
+            "label": "Deuteronomy 31:8",
+            "startChapter": 31,
+            "startVerse": 8,
+            "endChapter": 31,
+            "endVerse": 8
+          },
+          "curationStatus": "provisional"
+        },
+        {
+          "id": "psa-37-5",
+          "reference": {
+            "book": "PSA",
+            "label": "Psalm 37:5",
+            "startChapter": 37,
+            "startVerse": 5,
+            "endChapter": 37,
+            "endVerse": 5
+          },
+          "curationStatus": "provisional"
+        }
+      ],
+      "group": "Circumstances"
+    },
+    {
+      "id": "searching-for-purpose",
+      "name": "Searching for Purpose",
+      "description": "Scripture for seeking purpose, direction, and faithful service.",
+      "curationStatus": "provisional",
+      "scriptures": [
+        {
+          "id": "eph-2-10",
+          "reference": {
+            "book": "EPH",
+            "label": "Ephesians 2:10",
+            "startChapter": 2,
+            "startVerse": 10,
+            "endChapter": 2,
+            "endVerse": 10
+          },
+          "curationStatus": "provisional"
+        },
+        {
+          "id": "psa-138-8",
+          "reference": {
+            "book": "PSA",
+            "label": "Psalm 138:8",
+            "startChapter": 138,
+            "startVerse": 8,
+            "endChapter": 138,
+            "endVerse": 8
+          },
+          "curationStatus": "provisional"
+        },
+        {
+          "id": "jer-1-5",
+          "reference": {
+            "book": "JER",
+            "label": "Jeremiah 1:5",
+            "startChapter": 1,
+            "startVerse": 5,
+            "endChapter": 1,
+            "endVerse": 5
+          },
+          "curationStatus": "provisional"
+        },
+        {
+          "id": "rom-8-28",
+          "reference": {
+            "book": "ROM",
+            "label": "Romans 8:28",
+            "startChapter": 8,
+            "startVerse": 28,
+            "endChapter": 8,
+            "endVerse": 28
+          },
+          "curationStatus": "provisional"
+        },
+        {
+          "id": "1pe-2-9",
+          "reference": {
+            "book": "1PE",
+            "label": "1 Peter 2:9",
+            "startChapter": 2,
+            "startVerse": 9,
+            "endChapter": 2,
+            "endVerse": 9
+          },
+          "curationStatus": "provisional"
+        },
+        {
+          "id": "col-3-23-24",
+          "reference": {
+            "book": "COL",
+            "label": "Colossians 3:23-24",
+            "startChapter": 3,
+            "startVerse": 23,
+            "endChapter": 3,
+            "endVerse": 24
+          },
+          "curationStatus": "provisional"
+        },
+        {
+          "id": "mat-5-16",
+          "reference": {
+            "book": "MAT",
+            "label": "Matthew 5:16",
+            "startChapter": 5,
+            "startVerse": 16,
+            "endChapter": 5,
+            "endVerse": 16
+          },
+          "curationStatus": "provisional"
+        },
+        {
+          "id": "pro-19-21",
+          "reference": {
+            "book": "PRO",
+            "label": "Proverbs 19:21",
+            "startChapter": 19,
+            "startVerse": 21,
+            "endChapter": 19,
+            "endVerse": 21
+          },
+          "curationStatus": "provisional"
+        }
+      ],
+      "group": "Circumstances"
+    },
+    {
+      "id": "facing-temptation",
+      "name": "Facing Temptation",
+      "description": "Scripture for resisting temptation and choosing faithfulness.",
+      "curationStatus": "provisional",
+      "scriptures": [
+        {
+          "id": "1co-10-13",
+          "reference": {
+            "book": "1CO",
+            "label": "1 Corinthians 10:13",
+            "startChapter": 10,
+            "startVerse": 13,
+            "endChapter": 10,
+            "endVerse": 13
+          },
+          "curationStatus": "provisional"
+        },
+        {
+          "id": "jas-1-12-15",
+          "reference": {
+            "book": "JAS",
+            "label": "James 1:12-15",
+            "startChapter": 1,
+            "startVerse": 12,
+            "endChapter": 1,
+            "endVerse": 15
+          },
+          "curationStatus": "provisional"
+        },
+        {
+          "id": "heb-4-15-16",
+          "reference": {
+            "book": "HEB",
+            "label": "Hebrews 4:15-16",
+            "startChapter": 4,
+            "startVerse": 15,
+            "endChapter": 4,
+            "endVerse": 16
+          },
+          "curationStatus": "provisional"
+        },
+        {
+          "id": "mat-26-41",
+          "reference": {
+            "book": "MAT",
+            "label": "Matthew 26:41",
+            "startChapter": 26,
+            "startVerse": 41,
+            "endChapter": 26,
+            "endVerse": 41
+          },
+          "curationStatus": "provisional"
+        },
+        {
+          "id": "gal-5-16",
+          "reference": {
+            "book": "GAL",
+            "label": "Galatians 5:16",
+            "startChapter": 5,
+            "startVerse": 16,
+            "endChapter": 5,
+            "endVerse": 16
+          },
+          "curationStatus": "provisional"
+        },
+        {
+          "id": "psa-119-11",
+          "reference": {
+            "book": "PSA",
+            "label": "Psalm 119:11",
+            "startChapter": 119,
+            "startVerse": 11,
+            "endChapter": 119,
+            "endVerse": 11
+          },
+          "curationStatus": "provisional"
+        },
+        {
+          "id": "2ti-2-22",
+          "reference": {
+            "book": "2TI",
+            "label": "2 Timothy 2:22",
+            "startChapter": 2,
+            "startVerse": 22,
+            "endChapter": 2,
+            "endVerse": 22
+          },
+          "curationStatus": "provisional"
+        },
+        {
+          "id": "rom-6-12-14",
+          "reference": {
+            "book": "ROM",
+            "label": "Romans 6:12-14",
+            "startChapter": 6,
+            "startVerse": 12,
+            "endChapter": 6,
+            "endVerse": 14
+          },
+          "curationStatus": "provisional"
+        }
+      ],
+      "group": "Circumstances"
+    },
+    {
+      "id": "struggling-to-forgive",
+      "name": "Struggling to Forgive",
+      "description": "Scripture for receiving and extending forgiveness.",
+      "curationStatus": "provisional",
+      "scriptures": [
+        {
+          "id": "eph-4-32",
+          "reference": {
+            "book": "EPH",
+            "label": "Ephesians 4:32",
+            "startChapter": 4,
+            "startVerse": 32,
+            "endChapter": 4,
+            "endVerse": 32
+          },
+          "curationStatus": "provisional"
+        },
+        {
+          "id": "col-3-13",
+          "reference": {
+            "book": "COL",
+            "label": "Colossians 3:13",
+            "startChapter": 3,
+            "startVerse": 13,
+            "endChapter": 3,
+            "endVerse": 13
+          },
+          "curationStatus": "provisional"
+        },
+        {
+          "id": "mat-6-14-15",
+          "reference": {
+            "book": "MAT",
+            "label": "Matthew 6:14-15",
+            "startChapter": 6,
+            "startVerse": 14,
+            "endChapter": 6,
+            "endVerse": 15
+          },
+          "curationStatus": "provisional"
+        },
+        {
+          "id": "rom-12-19",
+          "reference": {
+            "book": "ROM",
+            "label": "Romans 12:19",
+            "startChapter": 12,
+            "startVerse": 19,
+            "endChapter": 12,
+            "endVerse": 19
+          },
+          "curationStatus": "provisional"
+        },
+        {
+          "id": "luk-6-36-37",
+          "reference": {
+            "book": "LUK",
+            "label": "Luke 6:36-37",
+            "startChapter": 6,
+            "startVerse": 36,
+            "endChapter": 6,
+            "endVerse": 37
+          },
+          "curationStatus": "provisional"
+        },
+        {
+          "id": "mat-18-21-22",
+          "reference": {
+            "book": "MAT",
+            "label": "Matthew 18:21-22",
+            "startChapter": 18,
+            "startVerse": 21,
+            "endChapter": 18,
+            "endVerse": 22
+          },
+          "curationStatus": "provisional"
+        },
+        {
+          "id": "eph-4-31-32",
+          "reference": {
+            "book": "EPH",
+            "label": "Ephesians 4:31-32",
+            "startChapter": 4,
+            "startVerse": 31,
+            "endChapter": 4,
+            "endVerse": 32
+          },
+          "curationStatus": "provisional"
+        },
+        {
+          "id": "psa-103-12",
+          "reference": {
+            "book": "PSA",
+            "label": "Psalm 103:12",
+            "startChapter": 103,
+            "startVerse": 12,
+            "endChapter": 103,
+            "endVerse": 12
+          },
+          "curationStatus": "provisional"
+        }
+      ],
+      "group": "Circumstances"
+    },
+    {
+      "id": "doubting-my-faith",
+      "name": "Doubting My Faith",
+      "description": "Scripture for bringing questions and doubts about faith to God.",
+      "curationStatus": "provisional",
+      "scriptures": [
+        {
+          "id": "mrk-9-24",
+          "reference": {
+            "book": "MRK",
+            "label": "Mark 9:24",
+            "startChapter": 9,
+            "startVerse": 24,
+            "endChapter": 9,
+            "endVerse": 24
+          },
+          "curationStatus": "provisional"
+        },
+        {
+          "id": "jud-1-22",
+          "reference": {
+            "book": "JUD",
+            "label": "Jude 22",
+            "startChapter": 1,
+            "startVerse": 22,
+            "endChapter": 1,
+            "endVerse": 22
+          },
+          "curationStatus": "provisional"
+        },
+        {
+          "id": "jhn-20-27-29",
+          "reference": {
+            "book": "JHN",
+            "label": "John 20:27-29",
+            "startChapter": 20,
+            "startVerse": 27,
+            "endChapter": 20,
+            "endVerse": 29
+          },
+          "curationStatus": "provisional"
+        },
+        {
+          "id": "jas-1-5-6",
+          "reference": {
+            "book": "JAS",
+            "label": "James 1:5-6",
+            "startChapter": 1,
+            "startVerse": 5,
+            "endChapter": 1,
+            "endVerse": 6
+          },
+          "curationStatus": "provisional"
+        },
+        {
+          "id": "psa-73-21-26",
+          "reference": {
+            "book": "PSA",
+            "label": "Psalm 73:21-26",
+            "startChapter": 73,
+            "startVerse": 21,
+            "endChapter": 73,
+            "endVerse": 26
+          },
+          "curationStatus": "provisional"
+        },
+        {
+          "id": "heb-11-1",
+          "reference": {
+            "book": "HEB",
+            "label": "Hebrews 11:1",
+            "startChapter": 11,
+            "startVerse": 1,
+            "endChapter": 11,
+            "endVerse": 1
+          },
+          "curationStatus": "provisional"
+        },
+        {
+          "id": "rom-10-17",
+          "reference": {
+            "book": "ROM",
+            "label": "Romans 10:17",
+            "startChapter": 10,
+            "startVerse": 17,
+            "endChapter": 10,
+            "endVerse": 17
+          },
+          "curationStatus": "provisional"
+        },
+        {
+          "id": "1pe-1-6-7",
+          "reference": {
+            "book": "1PE",
+            "label": "1 Peter 1:6-7",
+            "startChapter": 1,
+            "startVerse": 6,
+            "endChapter": 1,
+            "endVerse": 7
+          },
+          "curationStatus": "provisional"
+        }
+      ],
+      "group": "Circumstances"
+    }
+  ]
+}
+
