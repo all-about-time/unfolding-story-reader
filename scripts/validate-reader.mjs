@@ -2,7 +2,7 @@ import fs from 'node:fs';
 import vm from 'node:vm';
 import assert from 'node:assert/strict';
 const sessions = JSON.parse(fs.readFileSync('data/sessions.json', 'utf8'));
-const source = fs.readFileSync('app.js', 'utf8').replace(/^import .*?;\r?\n/, '').replace(/init\(\);\s*$/, '');
+const source = fs.readFileSync('app.js', 'utf8').replace(/^import .*?;\r?\n/gm, '').replace(/init\(\);\s*$/, '');
 function setup(saved = {}, blocked = false) {
   const values = new Map(Object.entries(saved));
   const elements = new Map();

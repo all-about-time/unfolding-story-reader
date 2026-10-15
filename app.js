@@ -1,4 +1,5 @@
 import { initRenew } from './renew.js';
+import { initPrayer } from './prayer.js';
 
 const STORAGE = { completed: 'unfolding-story-completed', font: 'unfolding-story-font', theme: 'unfolding-story-theme', accent: 'unfolding-story-accent', fontStyle: 'unfolding-story-font-style' };
 const storage = {
@@ -236,6 +237,7 @@ async function init() {
     document.addEventListener('keydown', event => { if (event.key === 'Escape' && !$('overview').hidden) toggleOverview(false); });
     await renderSession(sessionFromUrl());
     initRenew();
+    initPrayer();
   } catch (error) {
     $('error').hidden = false;
     $('error').textContent = error.message;
