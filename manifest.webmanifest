@@ -1,0 +1,13 @@
+{
+  "name": "Meditate",
+  "short_name": "Meditate",
+  "description": "A progressive Scripture reader with spaces to read, renew, and reflect.",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#f7f6f0",
+  "theme_color": "#a4a20e",
+  "icons": [
+    { "src": "./assets/meditate.png", "sizes": "208x208", "type": "image/png", "purpose": "any maskable" }
+  ]
+}
+
