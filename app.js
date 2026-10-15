@@ -145,7 +145,7 @@ function toggleOverview(show) {
 
 async function renderSession(session) {
   state.current = session;
-  document.title = `${session.id} — ${session.title} | The Unfolding Story`;
+  document.title = `${session.id} — ${session.title} | Meditate`;
   $('part').textContent = session.part;
   $('title').textContent = session.title;
   $('session-meta').textContent = `Session ${session.number} of ${state.sessions.length} · ${session.estimatedVerses} verses · ${session.length.toLowerCase()}`;
@@ -246,3 +246,4 @@ async function init() {
 }
 
 init();
+
