@@ -1,1 +1,2 @@
-const applyMeditateTitle=()=>{document.title=document.title.replace('The Unfolding Story','Meditate')};applyMeditateTitle();new MutationObserver(applyMeditateTitle).observe(document.querySelector('title'),{childList:true});
+// The page title is set by app.js when a reading session loads.
+
