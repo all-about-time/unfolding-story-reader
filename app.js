@@ -103,8 +103,6 @@ function updateProgress() {
   const resume = state.sessions[Math.min(lastCompleted, state.sessions.length - 1)];
   $('resume-link').href = sessionHref(resume);
   const complete = state.current && state.completed.has(state.current.id);
-  $('complete').textContent = complete ? 'Completed ✓' : 'Mark complete';
-  $('complete').classList.toggle('is-complete', complete);
   $('complete-bottom').textContent = complete ? 'Session completed ✓' : 'Mark Session complete';
   $('complete-bottom').classList.toggle('is-complete', complete);
   document.querySelectorAll('[data-session]').forEach(link => link.classList.toggle('is-complete', state.completed.has(link.dataset.session)));
@@ -145,11 +143,10 @@ function toggleOverview(show) {
 
 async function renderSession(session) {
   state.current = session;
-  document.title = `${session.id} — ${session.title} | Meditate`;
+  document.title = `${session.id} — ${session.title} | Meditate on the Word`;
   $('part').textContent = session.part;
   $('title').textContent = session.title;
-  $('session-meta').textContent = `Session ${session.number} of ${state.sessions.length} · ${session.estimatedVerses} verses · ${session.length.toLowerCase()}`;
-  $('session-select').value = session.id;
+  $('session-meta').textContent = `Session ${session.number} of ${state.sessions.length}`;
   const previous = state.sessions[session.number - 2];
   const next = state.sessions[session.number];
   $('previous').href = previous ? sessionHref(previous) : sessionHref(session);
@@ -193,17 +190,9 @@ async function init() {
     if (!response.ok) throw new Error('Could not load the reading plan.');
     state.sessions = await response.json();
     state.completed = new Set([...state.completed].filter(id => state.sessions.some(session => session.id === id)));
-    for (const session of state.sessions) {
-      const option = document.createElement('option');
-      option.value = session.id;
-      option.textContent = `${session.id} · ${session.title}`;
-      $('session-select').append(option);
-    }
     buildOverview();
-    $('session-select').onchange = () => location.href = sessionHref(state.sessions.find(session => session.id === $('session-select').value));
     $('smaller').onclick = () => changeSize(-2);
     $('larger').onclick = () => changeSize(2);
-    $('complete').onclick = toggleComplete;
     $('complete-bottom').onclick = toggleComplete;
     $('theme-toggle').onclick = () => setTheme(state.theme === 'dark' ? 'light' : 'dark');
     setTheme(state.theme);
