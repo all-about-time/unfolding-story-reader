@@ -184,6 +184,13 @@ function setTheme(theme) {
   $('theme-toggle').setAttribute('aria-pressed', String(theme === 'dark'));
 }
 
+
+const SHARE_URL='https://bit.ly/meditate-on-word';
+const SHARE_TEXT='Meditate on the Word: A progressive Scripture reader with spaces to read, reflect and respond.';
+function prefersMobileSharing(){return matchMedia('(pointer:coarse)').matches||/Android|iPhone|iPad|iPod/i.test(navigator.userAgent)}
+async function copyShareLink(){const input=$('share-link');try{if(navigator.clipboard?.writeText)await navigator.clipboard.writeText(SHARE_URL);else{input.focus();input.select();if(!document.execCommand('copy'))throw Error('Copy unavailable')} $('share-status').textContent='Link copied.'}catch{$('share-status').textContent='Select and copy the link above.';input.focus();input.select()}}
+async function shareApp(){if(navigator.share&&prefersMobileSharing()){try{await navigator.share({title:'Meditate on the Word',text:SHARE_TEXT,url:SHARE_URL});return}catch(error){if(error?.name==='AbortError')return}}$('share-status').textContent='';$('share-link').value=SHARE_URL;$('share-dialog').showModal()}
+
 async function init() {
   try {
     const response = await fetch('./data/sessions.json');
@@ -199,6 +206,9 @@ async function init() {
     setAccent(storage.get(STORAGE.accent, 'green'));
     setFontStyle(storage.get(STORAGE.fontStyle, 'serif'));
     changeSize(0);
+    $('share-open').onclick = shareApp;
+    $('share-close').onclick = () => $('share-dialog').close();
+    $('share-copy').onclick = copyShareLink;
     $('settings-open').onclick = () => $('settings-dialog').showModal();
     $('settings-close').onclick = () => $('settings-dialog').close();
     $('text-size').oninput = event => changeSize(Number(event.target.value) - state.font);
